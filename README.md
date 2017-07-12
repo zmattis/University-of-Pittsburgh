@@ -1,6 +1,6 @@
 #University of Pittsburgh#
 
-**_ For reference only. _** <br />
+**_For reference only._** <br />
 
 ENGR 0011 - Intro to Engineering Analysis <br />
 ENGR 0012 - Engineering Problem Solving <br />
