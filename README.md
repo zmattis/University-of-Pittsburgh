@@ -11,6 +11,10 @@ They are (generally) written in Java or C, and may be complete programs, or mere
 ## Class and Project Information
 
 Includes projects for the following classes:
+  Swanson
+*   ENGR 0011 - Intro to Engineering Analysis
+*   ENGR 0012 - Intro to Engineering Computing
+  Dietrich
 *   CS 0401 - Intermediate Programming Using Java
 *   CS 0445 - Data Structures
 *   CS 0447 - Computer Organization and Assembly Language
