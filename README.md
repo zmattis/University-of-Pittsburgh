@@ -15,8 +15,8 @@ Includes projects for the following classes:
 *   CS 0445 - Data Structures
 *   CS 0447 - Computer Organization and Assembly Language
 *   CS 0449 - Introduction to Systems Software
-*   CS1501 - Algorithm Implementation
-*   CS1550 - Introduction to Operating Systems
+*   CS 1501 - Algorithm Implementation
+*   CS 1550 - Introduction to Operating Systems
 
 View my website [here](http://pitt.edu/~zmm15/) to see more of my work.
 
