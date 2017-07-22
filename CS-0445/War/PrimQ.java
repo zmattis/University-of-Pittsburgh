@@ -4,7 +4,7 @@
 // implement them correctly in your MultiDS class.
 
 // The overall logic of the PrimQ<T> is the following:
-//		Data is logically "added" in the same order that it is "removed".
+// Data is logically "added" in the same order that it is "removed".
 // However, there is no requirement for the physical storage of the actual
 // data.  Your only requirement for the MultiDS<T> class is that all of the
 // methods work as specified and that your MultiDS<T> class have an array as its
@@ -21,17 +21,17 @@ public interface PrimQ<T>
 	// all goes well, return true.  If there is no room in the PrimQ for
 	// the new item, return false (you should NOT resize it)
 	public boolean addItem(T item);
-	
+
 	// Remove and return the "oldest" item in the PrimQ.  If the PrimQ
 	// is empty, return null.
 	public T removeItem();
-	
+
 	// Return true if the PrimQ is full, and false otherwise
 	public boolean full();
-	
+
 	// Return true if the PrimQ is empty, and false otherwise
 	public boolean empty();
-	
+
 	// Return the number of items currently in the PrimQ
 	public int size();
 

@@ -1,4 +1,4 @@
-//// CS 0445 Spring 2017 
+// CS 0445 Spring 2017
 // Zack Mattis 4020473
 // Assignment 1 War class
 
@@ -10,13 +10,13 @@ public class War
 		int roundCount = 0;
 		int cardCount = 0;
 		System.out.print("Welcome to the Game of War!\n\n");
-		
+
 		//Create the Players hands and discard piles
 		MultiDS<Card> Player0_hand = new MultiDS<Card>(52);
 		MultiDS<Card> Player1_hand = new MultiDS<Card>(52);
 		MultiDS<Card> Player0_discard = new MultiDS<Card>(52);
 		MultiDS<Card> Player1_discard = new MultiDS<Card>(52);
-		
+
 		MultiDS<Card> initialDeck = new MultiDS<Card>(52);
 		MultiDS<Card> warDeck = new MultiDS<Card>(52);
 
@@ -27,11 +27,11 @@ public class War
 			{
 				Card c = new Card(s,r);
 				initialDeck.addItem(c);
-			}	
+			}
 		}
 		initialDeck.shuffle();
-		
-		
+
+
 		//Equally divide shuffled hand between 2 players
 		System.out.print("Now dealing the cards to the players...\n\n");
 		for(int i=0;i<52;i++){
@@ -45,33 +45,28 @@ public class War
 		System.out.print("Here is Player 0's Hand:\n" + Player0_hand.toString() + "\n\n");
 		System.out.print("Here is Player 1's Hand:\n" + Player1_hand.toString() + "\n\n");
 		boolean gameContinue0=true, gameContinue1=true;
+
 		//Move cards from discard to hand
 		gameContinue0=discard2Hand(Player0_hand,Player0_discard,"0");
-			
 		//Move cards from discard to hand
 		gameContinue1=discard2Hand(Player1_hand,Player1_discard,"1");
-			
-		
-		
+
 		//For Loop to run through the specified number of turns
 		while (roundCount!=numberOfTurns && gameContinue0==true && gameContinue1==true)
 		{
-			
-			
 			cardCount=0;
-			
+
 			Card temp0=Player0_hand.removeItem();
 			Card temp1=Player1_hand.removeItem();
 			int result = temp0.compareTo(temp1);
 			cardCount++;
 			cardCount++;
-			
+
 			if (result==0){
 				System.out.print("\tWAR: " + temp0 + " ties " + temp1 + "\n");
 				warDeck.addItem(temp0);
 				warDeck.addItem(temp1);
-			
-				
+
 				while (result == 0)
 				{
 					//Add if statements to check for empty hands
@@ -87,11 +82,10 @@ public class War
 					cardCount++;
 					System.out.print("\tPlayer 0:" + risk0 + " and Player 1:" + risk1 + " are at risk!\n");
 					gameContinue0=discard2Hand(Player0_hand,Player0_discard,"0");
-					gameContinue1=discard2Hand(Player1_hand,Player1_discard,"1");		
+					gameContinue1=discard2Hand(Player1_hand,Player1_discard,"1");
 					if (gameContinue0==false) {break;}
 					if (gameContinue1==false) {break;}
-					
-					
+
 					// If statement for secondary war
 					Card war0=Player0_hand.removeItem();
 					Card war1=Player1_hand.removeItem();
@@ -102,16 +96,15 @@ public class War
 					//temp0=war0;
 					//temp1=war1;
 					result = war0.compareTo(war1);
-					
+
 					if (result==0){
 						System.out.print("\tWAR: " + war0 + " ties " + war1 + "\n");
 					}
-					
+
 				}
-				
-			
+
 			}
-			
+
 			if(result>0){
 				System.out.print("Player 0 Wins Round " + roundCount + ": " + temp0 + " beats " + temp1 + " : " + cardCount + " cards\n");
 				if (warDeck.empty()){
@@ -125,7 +118,7 @@ public class War
 					}
 				}
 			}
-			
+
 			else if(result<0){
 				System.out.print("Player 1 Wins Round " + roundCount + ": " + temp0 + " loses to " + temp1 + " : " + cardCount + " cards\n");
 				if (warDeck.empty()){
@@ -139,23 +132,23 @@ public class War
 					}
 				}
 			}
-			
+
 			warDeck.clear();
 			roundCount++;
-		
+
 			//Move cards from discard to hand
 			gameContinue0=discard2Hand(Player0_hand,Player0_discard,"0");
 			//Move cards from discard to hand
 			gameContinue1=discard2Hand(Player1_hand,Player1_discard,"1");
 		}
-			
+
 		discard2Hand(Player0_hand,Player0_discard,"end");
 		discard2Hand(Player1_hand,Player1_discard,"end");
-		
+
 		int final0 = Player0_hand.size()+Player0_discard.size();
 		int final1 = Player1_hand.size()+Player1_discard.size();
-		
-		
+
+
 		if (Player0_hand.empty()){
 			System.out.print("\nPlayer 0 is out of cards!\n Player 1 is the WINNER!");
 		}
@@ -175,13 +168,8 @@ public class War
 			}
 		}
 
-
-
-
-
-		
 	}
-	
+
 	//Method that checks to see if players hand is empty and needs to be exchanged w/ discard
 	//Returns false if there are no cards in hand or discard to symbolize end of game
 	public static boolean discard2Hand(MultiDS<Card> hand, MultiDS<Card> discard, String t){
@@ -200,12 +188,11 @@ public class War
 					if (!t.equals("end")) System.out.print("\tGetting and shuffling the pile for player " + t + "\n");
 					hand.shuffle();
 				}
-				
-				
+
 			}
 		return true;
-		
-		
+
+
 	}
 
 }
