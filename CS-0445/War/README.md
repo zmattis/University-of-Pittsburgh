@@ -21,7 +21,7 @@ Enter the desired number of turns as command line arg[2].
 * PrimQ.java -- queue interface
 * Reorder.java -- reorder interface
 * Card.java -- card class used for card games
-* Assig1A.java -- driver program for MultiDS<T>
+* Assig1A.java -- driver program for MultiDS\<T\>
 * A1Help.java -- driver program for Card class
 
 ## Project Hierarchy
