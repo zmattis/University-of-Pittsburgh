@@ -6,7 +6,7 @@ CS 0445 Assignment 1
 
 War simulates a multiplayer card game of war vs. a computer.
 
-## Compiling & Running
+## Usage
 
 To simulate a game of war, execute the following command:
 
