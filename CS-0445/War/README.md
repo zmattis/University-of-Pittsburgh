@@ -8,7 +8,7 @@ War simulates a multiplayer card game of war vs. a computer.
 
 ## Compiling & Running
 
-To simulate a game of war, execute the following command:
+To simulate a game of war, execute the following command: <br />
   java War [ # of turns ]
   
 Enter the desired number of turns as command line arg[2].
