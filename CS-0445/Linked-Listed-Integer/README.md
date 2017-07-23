@@ -11,9 +11,6 @@ and is capable of performing basic arithmetic operations, such as additon, subtr
 
 To compile the source (.java) files, execute the following commands:
 
-* javac A2LList.java
-* javac LinkedListPlus.java
-* javac ReallyLongInt.java
 * javac LLPTest.java
 * javac RLITest.java
 
