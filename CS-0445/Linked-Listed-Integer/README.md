@@ -1,29 +1,45 @@
-# CS 0445
+# Linked List Integer
 
-Data Structures
+CS 0445 Assignment 2
 
 ## Description
 
-This subfolder contains projects for CS0445, taught by John Ramirez during the Spring semester of 2017. They are written 
-in the Java programming language.
+Really Long Integer uses a custom linked list (LinkedListPlus.java) to store individiual digits of an integer,
+capable of performing arithmetic operations.
 
-## Projects
+## Usage
 
-Includes code for the following assignements:
+To test the Really Long Int, use the driver program RLITest.java, executing the following command:
 
-*   War
-*   Linked List Integer
-*   Recursive Word Search
-*   Sorting Algorithm
-*   Huffman Compression
+* java RLITest
 
-## Project Description
+To test the Linked List Plus, use the driver program LLPTest.java, executing the following command:
 
-War -- Multiplayer card game of War vs. a computer <br />
-Linked List Integer -- Integer class that uses LL for storage <br />
-Word Search -- Uses recursive algorithm to determine if phrase is in puzzle <br />
-Sorting Algorithm -- Testing different QuickSort & MergeSort algorithms & comparing runtimes <br />
-Huffman Compression -- Compression/Decrompression Huffman algorithm implemented using a fixed binary tree <br />
+* java LLPTest
+
+## File Details
+
+* ReallyLongInt.java -- really long integer class
+* LinkedListPLus.java -- linked list plus class
+* A2LList.java -- linked list class
+* RLITest.java -- driver program for ReallyLongInt class
+* LLPTest.java -- driver program for LinkedListPlus\<T\> class
+
+## Project Hierarchy
+
+Driver:
+
+* RLITest.java -- ReallyLongInt.java
+* LLITest.java -- LinkedListPlus.java
+
+Interfaces:
+
+* A2LList.java
+
+Classes:
+
+* ReallyLongInt.java -- LinkedListPlus.java
+* LinkedListPlus.java -- A2LList.java
 
 ## License
 
