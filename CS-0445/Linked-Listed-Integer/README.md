@@ -5,17 +5,25 @@ CS 0445 Assignment 2
 ## Description
 
 Really Long Integer uses a custom linked list (LinkedListPlus.java) to store individiual digits of an integer,
-capable of performing arithmetic operations.
+and is capable of performing basic arithmetic operations, such as additon, subtraction, multiplication, and division.
 
 ## Usage
 
-To test the Really Long Int, use the driver program RLITest.java, executing the following command:
+To compile the source (.java) files, execute the following commands:
 
-* java RLITest
+* javac A2LList.java
+* javac LinkedListPlus.java
+* javac ReallyLongInt.java
+* javac LLPTest.java
+* javac RLITest.java
 
-To test the Linked List Plus, use the driver program LLPTest.java, executing the following command:
+To test the LinkedListPlus\<T\> using the driver, execute the following command:
 
 * java LLPTest
+
+To test the ReallyLongInt class using the driver, execute the following command:
+
+* java RLITest
 
 ## File Details
 
@@ -24,6 +32,7 @@ To test the Linked List Plus, use the driver program LLPTest.java, executing the
 * A2LList.java -- linked list class
 * RLITest.java -- driver program for ReallyLongInt class
 * LLPTest.java -- driver program for LinkedListPlus\<T\> class
+* a2description.pdf -- project description from professor
 
 ## Project Hierarchy
 
