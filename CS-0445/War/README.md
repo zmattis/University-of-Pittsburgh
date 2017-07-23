@@ -8,7 +8,11 @@ War simulates a multiplayer card game of war vs. a computer.
 
 ## Usage
 
-To simulate a game of war, execute the following command:
+To compile the source (.java) files, execute the following command:
+
+* javac War.java
+
+To run the program, execute the following command:
 
 * java War [ # of turns ]
   
@@ -23,6 +27,7 @@ Enter the desired number of turns as command line arg[2].
 * Card.java -- card class used for card games
 * Assig1A.java -- driver program for MultiDS\<T\>
 * A1Help.java -- driver program for Card class
+* a1description.pdf -- project description from professor
 
 ## Project Hierarchy
 
