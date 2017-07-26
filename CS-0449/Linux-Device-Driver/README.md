@@ -23,14 +23,14 @@ To load the driver into the kernel, execute the following commmand in Linux:
 
 Note: The file pi_driver.ko needs to be present in your current directory ( /~ )
 
-To create the pi device, find the device id, executing the following commands:
+To create the pi device, find the device id, executing the following commands in Linux:
 
 * cd /sys/class/misc/pi
 * cat dev
 
 This should output two numbers as:    MAJOR:MINOR
 
-To create the new character device, execute the following commands:
+To create the new character device, execute the following commands in Linux:
 
 * cd /dev/
 * mknod pi c MAJOR MINOR
@@ -44,7 +44,7 @@ To compile the source (.c) file, execute the following command:
 
 Note: To build as 32-bit on 64-bit machine, add flag -m32 (gcc -m32 -o pi_digits pi_digits.c)
 
-Once the driver has been loaded into the linux kernel and the pi program has been compiled, execute the following command:
+Once the driver has been loaded into the linux kernel and the pi program has been compiled, execute the following command in Linux:
 
 * ./pi_digits START END
 
