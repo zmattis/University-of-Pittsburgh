@@ -14,14 +14,14 @@ To build the kernel object, use the Makefile, executing the following commmand:
 
 * make
 
-Note: Within Makefile, set the path KDIR to the directory of the kernel 
+Note: Within Makefile, set the path KDIR to the directory of the kernel <br />
 Note: To build 32-bit kernel using 64-bit machine, add flag ARCH=i386 (make ARCH=i386)
 
 To load the driver into the kernel, execute the following commmand in Linux: 
 
 * insmod pi_driver.ko
 
-Note: The file pi_driver.ko needs to be in your current directory ( /~ )
+Note: The file pi_driver.ko needs to be present in your current directory ( /~ )
 
 To create the pi device, find the device id, executing the following commands:
 
@@ -35,7 +35,8 @@ To create the new character device, execute the following commands:
 * cd /dev/
 * mknod pi c MAJOR MINOR
 
-Note: Replace MAJOR, MINOR with the numbers found above.
+Note: Replace MAJOR, MINOR with the numbers found above. <br />
+Note: These numbers are used to link drivers to their devices
 
 To compile the source (.c) file, execute the following command:
 
