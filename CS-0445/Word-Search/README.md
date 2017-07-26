@@ -12,11 +12,11 @@ branching to find sequential words.
 
 To compile the source (.java) files, execute the following command:
 
-* javac Assig3.java
+* javac WordSearch.java
 
 To run the program, execute the following command:
 
-* java Assig3
+* java WordSearch
 
 Within the program, enter the name of the file that contains both the parameters of the board size
 and the board itself. See sample.txt as an example. After loading the board, simply enter the phrase
@@ -24,7 +24,7 @@ you wish to search for, or enter nothing to exit the program.
 
 ## File Details
 
-* Assig3.java -- Word Search parent program, capable of searching for entire phrases
+* WordSearch.java -- Word Search parent program, capable of searching for entire phrases
 * FindWord.java -- Backtracking child program, only capable of searching for words
 * sample.txt -- example board for program, with 2 integers ( row col ) listed above the board
 * sample2.txt -- additional example
@@ -35,7 +35,7 @@ you wish to search for, or enter nothing to exit the program.
 
 Driver:
 
-* Assig3.java -- sample.txt
+* WordSearch.java -- sample.txt
 
 ## License
 
