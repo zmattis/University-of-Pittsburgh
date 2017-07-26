@@ -7,15 +7,15 @@
 import java.io.*;
 import java.util.*;
 
-public class Assig3
+public class WordSearch
 {
 	public static void main(String [] args)
 	{
-		new Assig3();
+		new WordSearch();
 	}
 
 	// Constructor to set things up and make the initial search call.
-	public Assig3()
+	public WordSearch()
 	{
   	Scanner inScan = new Scanner(System.in);
 		Scanner fReader;
