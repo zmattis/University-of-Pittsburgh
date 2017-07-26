@@ -10,7 +10,7 @@ The pi device driver is a linux driver that creates a new device that returns th
 
 Note: To use QEMU to emulate Linux, simply download qemu.zip, extract it, and run the qemu-win.bat file (Windows only).
 
-To build the kernel object, use the Makefile, executing the following commmand:
+To build the kernel object on your machine, use the Makefile, executing the following commmand:
 
 * make
 
@@ -38,7 +38,7 @@ To create the new character device, execute the following commands in Linux:
 Note: Replace MAJOR, MINOR with the numbers found above. <br />
 Note: These numbers are used to link drivers to their devices
 
-To compile the source (.c) file, execute the following command:
+To compile the source (.c) file on your machine, execute the following command:
 
 * gcc -o pi_digits pi_digits.c
 
