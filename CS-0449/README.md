@@ -16,6 +16,7 @@ Includes code for the following assignements:
 *   Custom Strings()
 *   Password Cracking
 *   Custom Malloc()
+*   Linux Device Driver
 
 ## Project Description
 
@@ -24,6 +25,7 @@ ID3 Tag Editor -- Metadata tag that can be added to .ogg files to describe their
 Custom Strings() -- Outputs strings of printable characters from a file (ASCII 32 < x < ASCII 126) <br />
 Password Cracking -- Inspection of x86 assembly using gcc gdb to enter a password protected file <br />
 Custom Malloc() -- Mememory manipulation w/ both allocation and de-allocation functions. <br />
+Linux Device Driver -- Pi device driver that returns the digits of pi. <br />
 
 ## License
 
