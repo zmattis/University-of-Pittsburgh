@@ -61,11 +61,11 @@ Replace START, END with integers of the bounds of the digits of pi you wish to r
  
 ## Project Hierarchy
 
-Driver:
+Program Driver:
 
 * pi_digits.c -- pi_driver.c pi.h
 
-Device Interface:
+Linux Device Driver:
 
 * pi_driver.c -- pi.h
 
