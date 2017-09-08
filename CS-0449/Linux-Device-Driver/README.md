@@ -56,7 +56,7 @@ Replace START, END with integers of the bounds of the digits of pi you wish to r
 * pi_driver.c -- software interface of pi device (provides file operations for device)
 * pi.h -- header file containing function implementation of pi digits
 * Makefile -- file used to produce modules of pi_driver
-* qemu.zip -- compressed file containingLinux emulator
+* qemu.zip -- compressed file containing Linux emulator
 * a4description.pdf -- project description from professor
  
 ## Project Hierarchy
