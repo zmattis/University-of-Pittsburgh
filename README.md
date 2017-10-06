@@ -6,7 +6,7 @@ Repository containing the assignments I completed as a Computer Engineering stud
 
 This is a repo containing nearly all of the projects I did as a Computer Engineering student at the University of Pittsburgh. Many of these projects covered fundamental topics that are critical for any coder, so I wanted to provide them as examples and possible starting points for any project.
 
-They are (generally) written in Java or C, and may be complete programs, or merely code snippets.
+They are (generally) written in Java, C, or VHDL, and may be complete programs, or merely code snippets.
 
 ## Class and Project Information
 
@@ -15,6 +15,9 @@ Includes projects for the following classes:
   Swanson
 *   ENGR 0011 - Intro to Engineering Analysis
 *   ENGR 0012 - Intro to Engineering Computing
+*   ECE 1150 - Intro to Computer Networks
+*   ECE 1160 - Intro to Embedded Systems
+*   COE 1502 - Advanced Digital Design
 
   Dietrich
 *   CS 0401 - Intermediate Programming Using Java
