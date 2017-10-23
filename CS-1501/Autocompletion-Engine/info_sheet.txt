@@ -1,0 +1,59 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name:  Zack Mattis
+
+Lecture section:  TuTh 9:30am (NonW)
+
+Recitation day and time:  Fr 11:00 am
+
+Assignment #:  1
+
+Program due date:  9/25/17
+
+Handed in date:  9/25/17
+
+Source code file name(s):
+
+DLBTrie.java
+DLBNode.java
+DLBMethods.java
+DictionaryGenerator.java
+ac_test.java
+
+
+
+
+
+Other file name(s) (if relevant):
+
+
+
+
+
+
+
+Does your program run without error?:  Yes
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+
+
+
+
+
+
+
+Additional comments to the grader:
+
+
+
+
+
+
+

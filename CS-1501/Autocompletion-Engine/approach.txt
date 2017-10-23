@@ -1,0 +1,4 @@
+User History 
+
+The user history data structure utilizes the same de la Brandais trie as the dictionary trie, with an added
+count field to keep track of how many times the user has entered that specific sequence.
