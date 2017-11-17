@@ -22,8 +22,8 @@ Includes code for the following assignements:
 MIPS ALU -- 32 bit MIPS ALU containing custom Ripple-Carry Adder <br />
 Gray Code Counter -- Up/Down gray code counter, where only 1 bit changes per cycle <br />
 CheckSummer -- Error checking device that compares number of bits transmitted vs. total number of bits <br />
-T / R CheckSummer -- Dual synthesization w/ a transmitting and receiving FPGA synthesization of a checksummer, respectivelly <br />
-MIPS Pipelined CPU -- 5 stage Pipeline CPU implementing the MIPS instruction set (R, I, J),  w/ IF, ID, EX, MEM, & WB stages. 
+T / R CheckSummer -- Dual synthesization w/ a transmitting and receiving FPGA of a checksummer, respectively <br />
+MIPS Pipelined CPU -- 5 stage Pipeline CPU implementing the MIPS instruction set (R, I, J),  w/ IF, ID, EX, MEM, & WB stages. <br />
 
 ## License
 
