@@ -15,7 +15,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ac_test {
+public class AutoComplete {
 	
 	private static final int NUM_PREDICTIONS = 5;			//final integer for number of predictions
 	
