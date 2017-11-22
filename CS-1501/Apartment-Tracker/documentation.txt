@@ -1,0 +1,21 @@
+Zachary M. Mattis
+COE 1501 Assignment #3
+Priority Queue Apartment Tracker Justification
+
+
+For my implementation of the priority queue, I started with a boolean flag
+that indicates whether the data structure is min (price) or max (sq ft)
+heap. This priority queue contains implementations of methods for
+both floating and sinking data based upon the apartment's prices and
+square footage. This Priority Queue utilizes an R-way trie indirection
+structure to index its positions in the heap. This trie data structure
+stores the address, apartment number, and zip code as a concatenated
+path down the trie, with each character representing a new node.
+Additionally, a linked list data structure is used to hold the apartments
+that share a city. These linked lists are stored in a hash table that uses
+Horner's method on the apartment city to produce the hashing index. The
+location within the hash table corresponds to the linked list for the
+specified city, and a simplified heap is created (CityHeap) of that linked
+list whenever the city is specified. The overall program loops through a
+menu of the seven available options for the user, until he/she decides
+to end the program (Option 8).
