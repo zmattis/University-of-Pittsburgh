@@ -1,10 +1,10 @@
 /*************************************************************************
- *  Compilation:  javac MyLZW.java
- *  Execution:    java MyLZW - n < input.txt   (compress, standard execution)
- *  Execution:    java MyLZW - r < input.txt   (compress, reset codebook)
- *  Execution:    java MyLZW - m < input.txt   (compress, monitor mode)
+ *  Compilation:  javac variableLZW.java
+ *  Execution:    java variableLZW - n < input.txt   (compress, standard execution)
+ *  Execution:    java variableLZW - r < input.txt   (compress, reset codebook)
+ *  Execution:    java variableLZW - m < input.txt   (compress, monitor mode)
 
- *  Execution:    java MyLZW + < input.txt   (expand)
+ *  Execution:    java variableLZW + < input.txt   (expand)
  *  Dependencies: BinaryIn.java BinaryOut.java
  *
  *  Compress or expand binary input from standard input using LZW compression.
@@ -23,7 +23,7 @@
  *
  *************************************************************************/
 
-public class MyLZW {
+public class variableLZW {
     private static final int R = 256;        // number of input chars
     private static final int MIN_CW_NUM = 512;  // Min (2^W)
     private static final int MAX_CW_NUM = 65536;  // Max (2^W)
