@@ -1,0 +1,53 @@
+========================================
+CS/COE 1501 Assignment Information Sheet
+----------------------------------------
+
+You must submit an information sheet with every assignment.  Also be sure
+to submit all materials following the procedures described on the
+submission procedures page.
+
+Name:  Zack Mattis
+
+Lecture section: TuTh 9:30 - 10:45 COE (Non-W)
+
+Recitation day and time:  Fr 11:00 am
+
+Assignment #:  4
+
+Program due date: November 21, 2017
+
+Handed in date: November 21, 2017
+
+Source code file name(s):
+
+NetworkAnalysis.java
+NetworkConnection.java
+LL.java
+LLNode.java
+NetworkUI.java
+DijkstraNode.java
+DijkstraHeap.java
+
+
+
+
+Other file name(s) (if relevant):
+
+
+
+
+
+
+
+Does your program run without error?: Yes
+
+If not, what is/are the error(s) and which parts of your program run
+correctly?:
+
+
+  N/A
+
+
+
+
+Additional comments to the grader:  N/A
