@@ -1,0 +1,8 @@
+file: "secret.txt"
+client: connecting to 136.142.4.246
+client: sending data to the server...
+	Sending: "My secret message..."
+client: receiving data from the server
+	Received: "#z)?9(?.z7?));=?ttt"
+client: writing server data back to file
+

@@ -1,0 +1,6 @@
+server: waiting for connections...
+server: got connection from	::ffff:136.142.4.246
+	Received: "My secret message..."
+server: running XOR cipher...
+	Sending: "#z)?9(?.z7?));=?ttt"
+
