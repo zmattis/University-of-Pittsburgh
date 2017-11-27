@@ -12,10 +12,12 @@ in the C programming language.
 Includes code for the following assignements:
 
 *   Weather Client
+*   Encryption Server/Client
 
 ## Project Description
 
 Weather Client -- Weather Underground API client that uses Berkley Sockets to read current weather conditions <br />
+Encryption Server/Client -- Server/Client pair that encrypts/decrypts input file using XOR cipher algorithm <br />
 
 ## License
 
