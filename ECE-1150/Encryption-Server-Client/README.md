@@ -30,8 +30,8 @@ file (located in your working directory) as the 3rd argument.
 
 * server.c -- server source code, accepts incoming connections
 * client.c -- client source code, connects to server
-* lab2_analysis -- analysis document of server/client
-* lab2_description -- Project description from professor
+* lab2_analysis.docx -- analysis document of server/client
+* lab2_description.pdf -- Project description from professor
 * secret.txt -- example file for client
 * out -- folder containing piped-output files from running server/client
 
