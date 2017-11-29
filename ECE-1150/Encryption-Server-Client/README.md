@@ -12,7 +12,7 @@ it is written back into the input file.
 
 ## Usage
 
-To compile the source (.c) files, execute the following command:
+To compile the source (.c) files, execute the following command:<br/>
 Note: -lsocket -lnsl flags are used to link the proper networking libraries
 
 * gcc -o server server.c -lsocket -lnsl
@@ -23,8 +23,8 @@ To run the program, execute the following command:
 * ./server
 * ./client hostname file.*
 
-While the server is running, execute the client by passing the server host name as the second argument and the input 
-file (located in your working directory) as the third argument.
+While the server is running, execute the client by passing the server host name as the 2nd argument and the input 
+file (located in your working directory) as the 3rd argument.
 
 ## File Details
 
