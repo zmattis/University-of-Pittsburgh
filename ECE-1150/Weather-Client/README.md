@@ -24,8 +24,8 @@ To run the program, execute the following command:
 ## File Details
 
 * weather_client.c -- client source code, connects to API and retrieves weather conditions
-* lab1_analysis -- analysis document of client running
-* lab1_description -- Project description from professor
+* lab1_analysis.docx -- analysis document of client running
+* lab1_description.pdf -- Project description from professor
 
 
 ## Project Hierarchy
