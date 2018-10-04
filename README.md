@@ -6,7 +6,7 @@ Repository containing the assignments I completed as a Computer Engineering stud
 
 This is a repo containing nearly all of the projects I did as a Computer Engineering student at the University of Pittsburgh. Many of these projects covered fundamental topics that are critical for any coder, so I wanted to provide them as examples and possible starting points for any project.
 
-They are (generally) written in Java, C, or VHDL, and may be complete programs, or merely code snippets.
+They are (generally) written in Java, C, Python, or VHDL, and may be complete programs, or merely code snippets.
 
 ## Class and Project Information
 
