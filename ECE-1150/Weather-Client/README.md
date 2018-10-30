@@ -14,12 +14,15 @@ weather conditions to the user.
 To compile the source (.c) files, execute the following command:<br/>
 Note: -lsocket -lnsl flags are used to link the proper networking libraries
 
-* gcc -o weather_client weather_client.c -lsocket -lnsl
-
+```bash
+gcc -o weather_client weather_client.c -lsocket -lnsl
+```
 
 To run the program, execute the following command:
 
-* ./weather_client
+```bash
+./weather_client
+```
 
 ## File Details
 
