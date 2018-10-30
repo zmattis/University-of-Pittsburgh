@@ -15,13 +15,21 @@ it is written back into the input file.
 To compile the source (.c) files, execute the following command:<br/>
 Note: -lsocket -lnsl flags are used to link the proper networking libraries
 
-* gcc -o server server.c -lsocket -lnsl
-* gcc -o client client.c -lsocket -lnsl
+```bash
+gcc -o server server.c -lsocket -lnsl
+```
+```bash
+gcc -o client client.c -lsocket -lnsl
+```
 
-To run the program, execute the following command:
+To run the program, execute the following commands:
 
-* ./server
-* ./client hostname file.*
+```bash
+./server
+```
+```bash
+./client hostname file.txt
+```
 
 While the server is running, execute the client by passing the server host name as the 2nd argument and the input 
 file (located in your working directory) as the 3rd argument.
