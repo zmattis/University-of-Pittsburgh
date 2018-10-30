@@ -12,7 +12,7 @@ it is written back into the input file.
 
 ## Usage
 
-To compile the source (.c) files, execute the following command:<br/>
+To compile the source (.c) files, execute the following commands:<br/>
 Note: -lsocket -lnsl flags are used to link the proper networking libraries
 
 ```bash
