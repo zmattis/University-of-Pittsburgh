@@ -13,19 +13,20 @@ They are (generally) written in Java, C, Python, or VHDL, and may be complete pr
 Includes projects for the following classes:
 
   Swanson
-*   ENGR 0011 - Intro to Engineering Analysis
-*   ENGR 0012 - Intro to Engineering Computing
-*   ECE 1150 - Intro to Computer Networks
-*   ECE 1160 - Intro to Embedded Systems
+*   ENGR 0011 - Engineering Analysis
+*   ENGR 0012 - Engineering Computing
+*   ECE 1150 - Computer Networks
+*   ECE 1160 - Embedded Computer System Design
+*   ECE 1770 - Electronic Microprocessor Systems
 *   COE 1502 - Advanced Digital Design
 
   Dietrich
 *   CS 0401 - Intermediate Programming Using Java
 *   CS 0445 - Data Structures
 *   CS 0447 - Computer Organization and Assembly Language
-*   CS 0449 - Introduction to Systems Software
+*   CS 0449 - Systems Software
 *   CS 1501 - Algorithm Implementation
-*   CS 1550 - Introduction to Operating Systems
+*   CS 1550 - Operating Systems
 
 View my website [here](http://pitt.edu/~zmm15/) to see more of my work.
 
@@ -38,3 +39,5 @@ See LICENSE for more information.
 ## Contributing
 
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/).
+
+Feel free to contact me via email: zachary.mattis@pitt.edu.
