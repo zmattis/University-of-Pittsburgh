@@ -17,6 +17,7 @@ Includes projects for the following classes:
 *   ENGR 0012 - Engineering Computing
 *   ECE 1150 - Computer Networks
 *   ECE 1160 - Embedded Computer System Design
+*   ECE 1166 - Parallel Computer Architecture
 *   ECE 1770 - Electronic Microprocessor Systems
 *   COE 1502 - Advanced Digital Design
 
