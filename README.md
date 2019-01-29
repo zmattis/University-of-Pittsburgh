@@ -28,6 +28,8 @@ Includes projects for the following classes:
 *   CS 0449 - Systems Software
 *   CS 1501 - Algorithm Implementation
 *   CS 1550 - Operating Systems
+*   CS 1555 - Database Management Systems
+*   CS 1675 - Machine Learning
 
 View my website [here](http://pitt.edu/~zmm15/) to see more of my work.
 

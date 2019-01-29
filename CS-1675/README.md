@@ -4,12 +4,11 @@ Machine Learning
 
 ## Description
 
-This subfolder contains projects for CS1675, taught by  Milos Hauskrecht during the Spring semester of 2018-2019. They are written 
-using Matlab.
+This subfolder contains projects for CS1675, taught by Milos Hauskrecht during the Spring semester of 2018-2019. They are written using Matlab.
 
 ## Projects
 
-Includes code for the following assignements:
+Includes code for the following assignments:
 
 *   Homework 1 - Data Analysis
 
