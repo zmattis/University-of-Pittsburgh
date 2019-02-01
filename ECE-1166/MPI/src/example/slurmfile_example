@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --job-name=<YOUR NAME>
+#SBATCH --nodes=<NUMBER OF NODES>
+#SBATCH --ntasks-per-node=<NUMBER OF THREADS TO SPIN UP PER NODE>
+#SBATCH --cluster=mpi
+#SBATCH --mail-user=<YOUR PITT EMAIL>
+#SBATCH --mail-type=END,FAIL
+#SBATCH --time=0-00:2:00
+#SBATCH --qos=short
+
+module purge
+module load gcc/5.4.0 openmpi/3.0.0
+
+# copies everything in home directory
+cp -r ~/ $SLURM_SCRATCH
+
+cd $SLURM_SCRATCH
+run_on_exit() {
+	cp -r $SLURM_SCRATCH/* $SLURM_SUBMIT_DIR
+}
+trap run_on_exit EXIT
+
+###############################
+# Place your command line below
+
+# example of how to run an mpi program through slurm, $SLURM_SUBMIT_DIR is
+# the directory that you actually execute this in, all files are relative to that
+
+# srun -n 8 $SLURM_SUBMIT_DIR/<folder>/<executable> $SLURM_SUBMIT_DIR/<folder>/<some input data path> arg1 arg2, etc...
+
+
+crc-job-stats.py
+
+touch OUTPUT
+cp OUTPUT $SLURM_SUBMIT_DIR

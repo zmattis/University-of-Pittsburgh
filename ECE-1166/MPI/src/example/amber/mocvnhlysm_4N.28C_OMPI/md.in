@@ -1,0 +1,41 @@
+// md.in
+//  1 ns NVT equilibration with Langevin thermostat
+//  Written by Karl Debiec on 12-12-04
+//  Last updated 12-12-04
+
+&cntrl
+    nstlim          = 5000,
+    irest           = 1,
+    ntx             = 5,
+    ntb             = 1,
+
+    ntr             = 0,
+
+
+
+    ntp             = 0,
+
+
+
+    ntt             = 3,
+    tempi           = 300.0,
+    temp0           = 300.0,
+    gamma_ln        = 1.0,
+
+    dt              = 0.002,
+    ntf             = 2,
+    ntc             = 2,
+    cut             = 10,
+
+    ntpr            = 500,
+    ntwr            = 10000,
+    ntpr            = 500,
+    ntwx            = 500,
+    iwrap           = 1,
+&end
+&ewald
+    ew_type         = 0,
+    nfft1           = 64,
+    nfft2           = 64,
+    nfft3           = 64,
+&end
