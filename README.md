@@ -15,11 +15,13 @@ Includes projects for the following classes:
   Swanson
 *   ENGR 0011 - Engineering Analysis
 *   ENGR 0012 - Engineering Computing
-*   ECE 1150 - Computer Networks
-*   ECE 1160 - Embedded Computer System Design
-*   ECE 1166 - Parallel Computer Architecture
-*   ECE 1770 - Electronic Microprocessor Systems
-*   COE 1502 - Advanced Digital Design
+*   ECE  1150 - Computer Networks
+*   ECE  1160 - Embedded Computer System Design
+*   ECE  1166 - Parallel Computer Architecture
+*   ECE  1770 - Electronic Microprocessor Systems
+*   COE  1502 - Advanced Digital Design
+*   COE  1530 - Software Engineering
+*   COE  1541 - Computer Architecture
 
   Dietrich
 *   CS 0401 - Intermediate Programming Using Java
