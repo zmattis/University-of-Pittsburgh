@@ -2,11 +2,11 @@
 
 Zachary M. Mattis
 
-###Description
+### Description
 
 Message Passing Interface (MPI) C applications run on the University of Pittsburgh's Center for Research Computing (CRC) cluster, available h2p.crc.pitt.edu.
 
-###Compilation
+### Compilation
 
 Each C source code can be compiled on Pitt's CRC cluster using its corresponding bash script.
 
