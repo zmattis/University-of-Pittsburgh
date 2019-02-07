@@ -11,11 +11,12 @@ This subfolder contains projects for CS1675, taught by Milos Hauskrecht during t
 Includes code for the following assignments:
 
 *   Homework 1 - Data Analysis
+*   Homework 3 - Maximum Likelihood Estimation
 
 ## Project Description
 
 Homework 1 -- Introductory data analysis using Matlab <br />
-
+Homework 3 -- Gaussian, Beta, Exponential distribution analysis <br />
 
 ## License
 
