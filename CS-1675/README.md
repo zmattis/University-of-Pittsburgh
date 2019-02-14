@@ -12,11 +12,13 @@ Includes code for the following assignments:
 
 *   Homework 1 - Data Analysis
 *   Homework 3 - Maximum Likelihood Estimation
+*   Homework 4 - Linear Regression
 
 ## Project Description
 
 Homework 1 -- Introductory data analysis using Matlab <br />
 Homework 3 -- Gaussian, Beta, Exponential distribution analysis <br />
+Homework 4 -- Linear Regression analysis <br />
 
 ## License
 
