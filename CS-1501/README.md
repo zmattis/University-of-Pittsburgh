@@ -9,7 +9,7 @@ in the Java programming language.
 
 ## Projects
 
-Includes code for the following assignements:
+Includes code for the following assignments:
 
 *   Autocompletion Engine
 *   LZW Compression
