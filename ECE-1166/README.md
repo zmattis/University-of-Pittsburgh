@@ -10,12 +10,14 @@ This subfolder contains projects and papers for ECE1166, taught by Dr. Alan Geor
 
 Includes code and papers for the following assignments:
 
-*   History of Supercomputing
 *   Message Passing Interface
+*   Multi-Processing
+*   History of Supercomputing
 
 ## Project / Paper Description
 
 MPI -- Distributed computing for matrix multiplication on the Pitt CRC <br />
+OpenMP -- Multiprocessing computing on the Pitt CRC <br />
 History of Supercomputing -- Brief paper detailing major milestones in supercomputing <br />
 
 ## License
