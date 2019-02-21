@@ -18,12 +18,16 @@ Includes code for the following assignments:
 *   LCD Display
 *   Register Memory
 *   Flow Control
+*   Bubble Sort
+*   Functions and Subroutines
 
 ## Project Description
 
 LCD Display -- LCD library to display text to MCU LCD <br />
 Register Memory -- Source code debugging and memory analysis <br />
 Flow Control -- Assembly branching and looping control <br />
+Bubble Sort -- 1D array sorting implementation <br />
+Functions / Subroutines -- Functions and stack manipulation <br />
 
 ## License
 
