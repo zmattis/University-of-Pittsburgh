@@ -1,0 +1,195 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\graphicspath{ {./img/} }
+\setlength\parindent{0pt}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand{\thesubsection}{\alph{subsection})}
+\def\ojoin{\setbox0=\hbox{$\bowtie$}
+\rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+
+
+\title{CS1555 - Relational Algebra}
+\author{Zachary M. Mattis}
+
+
+\begin{document}
+	
+\maketitle
+
+
+\section{Arity / Cardinality}
+
+% A
+\subsection{$\pi_{country}(Users)$}
+
+\begin{verbatim}
+Arity       - 1
+Cardinality - Min() = 1, Max() = 100
+\end{verbatim}
+
+The arity is 1 due to only projecting the \textit{Country} column from the \textit{Users} relation. The min cardinality value occurs when all users live in the same country. The max cardinality occurs when each user lives in a different country (no duplicates). This could have an absolute max value of 195, as there are that many countries in the world today.
+
+% B
+\subsection{$Mail \leftouterjoin_{Mail.mailID=Recipients.mailID} Recipients$}
+
+\begin{verbatim}
+Arity       - 9
+Cardinality - Min() = 3500, Max() = 5499
+\end{verbatim}
+
+The arity is 9 due to selecting all columns from both the \textit{Mail} and \textit{Recipients} relations, even if they have the same value (\textit{mailID}). The min cardinality value occurs when each piece of mail has been sent to at least 1 user. The max cardinality occurs if only 1 piece of mail has been sent to 3500 recipients, resulting in 1999 records with null recipients on the left outer join. However, if mail MUST have at least 1 recipient, then the max cardinality is 3500.
+
+% C
+\subsection{$Mail * Labels$}
+
+\begin{verbatim}
+Arity       - 9
+Cardinality - 5,000,000
+\end{verbatim}
+
+
+The arity is 9 due to selecting all columns from both the \textit{Mail} and \textit{Labels} relations, even if they have the same value (\textit{mailID}). The cardinality value is equal to the cardinality of each relation multiplied together.
+
+\section{Expressions}
+
+% A
+\subsection{Urgent Mail}
+
+\[ \pi_{fname,\;lname,\;userID,\;subject,\;timeSent} (\sigma_{urgent=1} (Mail\;\leftouterjoin_{Mail.senderID=Users.userID}\;Users) )  \]
+
+\begin{verbatim}
+SQL:
+
+SELECT 
+    u.fname,
+    u.lname,
+    u.userID,
+    m.subject,
+    m.timeSent
+FROM
+    Mail m
+LEFT JOIN Users u
+    ON m.senderID = u.userID
+WHERE
+    m.urgent = 1;
+
+\end{verbatim}
+
+
+% B
+\subsection{Outside USA}
+
+\[ \pi_{userID} (\sigma_{urgent=1\;\wedge\;country <> ``USA"} (Mail\;\leftouterjoin_{Mail.senderID=Users.userID}\;Users) )  \]
+
+\begin{verbatim}
+SQL:
+
+SELECT  DISTINCT
+    u.userID
+FROM
+    Mail m
+LEFT JOIN Users u
+    ON m.senderID = u.userID
+WHERE
+    m.urgent = 1 AND
+    u.country <> "USA";
+
+\end{verbatim}
+
+% C
+\subsection{Important Label}
+
+\[ G_{sum(mailID)} (\pi_{mailID} (\sigma_{label=``important"\;\wedge\;urgent<>1\;\wedge\;timeSent=2015} (Mail\;\leftouterjoin_{Mail.mailID=Labels.mailID}\;Labels ))  \]
+
+\begin{verbatim}
+SQL:
+
+SELECT 
+    COUNT( DISTINCT m.mailID)
+FROM
+    Mail m
+LEFT JOIN Labels l
+    ON m.mailID = l.mailID
+WHERE
+    l.label = "important" AND
+    m.urgent <> 1 AND
+    YEAR(m.timeSent) = 2015;
+
+\end{verbatim}
+
+% D
+\subsection{Ava Lovelace}
+
+
+\[ \pi_{fname,\;lname} (\sigma_{recipientID=[\pi_{recipientID} (\sigma_{fname=``Ava"\;\wedge\;lname=``Lovelace"} (Mail\;\leftouterjoin\;_{senderID=userID}\;Users\leftouterjoin\;Recipients ))]} \]
+\[ (Mail\;\leftouterjoin\;Recipients\;\leftouterjoin\;_{senderID=userID}\;Users ))  \]
+
+
+\begin{verbatim}
+SQL:
+
+SELECT
+    u.fname,
+    u.lname
+FROM
+    Mail m
+LEFT JOIN Users u
+    ON m.senderID = u.userID
+LEFT JOIN Recipients r
+    ON m.mailID = r.mailID
+WHERE
+    r.recipientID = (
+    
+   SELECT DISTINCT
+       r.recipientID
+   FROM 
+       Mail m
+   LEFT JOIN Recipients r
+       ON m.mailID = r.mailID
+   LEFT JOIN Users u
+       ON m.senderID = u.userID
+   WHERE
+       u.fname = "Ava" AND
+       u.lname = "Lovelace"
+
+   );
+
+\end{verbatim}
+
+% E
+\subsection{Not Reply in USA}
+
+
+\[ \pi_{mailID} (\sigma_{replyTo=NULL\;\wedge\;(u\_send.country=``USA"\;\vee\;u\_recv.country=``USA")} \]
+\[ (Mail\;\leftouterjoin\;Recipients\;\leftouterjoin\;_{senderID=u\_send.userID}\;Users\;u\_send\;\leftouterjoin\;_{recipientID=u\_recv.userID}\;Users\;u\_recv ))  \]
+
+\begin{verbatim}
+SQL:
+
+SELECT DISTINCT
+    m.mailID
+FROM
+    Mail m
+LEFT JOIN Users u_send
+    ON m.senderID = u_send.userID
+LEFT JOIN Recipients r
+    ON m.mailID = r.mailID
+LEFT JOIN user u_recv
+    ON r.recipientID = u_recv.userID
+WHERE
+    m.replyTo IS NULL AND
+    ( u_send.country = "USA" OR
+      u_recv.country = "USA"
+    );
+
+\end{verbatim}
+
+\end{document}

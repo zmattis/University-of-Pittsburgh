@@ -11,10 +11,12 @@ This subfolder contains projects for CS1555, taught by Costantinos Costa during 
 Includes code for the following assignments:
 
 *   ER Modeling
+*   Relational Algebra
 
 ## Project Description
 
 ER Modeling -- Entity-Relationship modeling of data into Relational Database Schema <br />
+Relational Algebra -- Data modeling for relational databases <br />
 
 
 ## License
