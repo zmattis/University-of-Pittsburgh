@@ -1,0 +1,212 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subfig}
+\graphicspath{ {./img/} }
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Roman{section}.}
+\renewcommand{\thesubsection}{\alph{subsection}.}
+
+
+\title{CS1675 - Assignment 6}
+\author{Zachary M. Mattis}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1 - Support Vector Machines}
+
+% A
+\subsection{Weight / Bias}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r| }
+		\hline
+		\textbf{Attribute} & \textbf{Weight} \\
+		\hline
+		1 & 0.0445 \\
+		\hline
+		2 & 0.0116 \\
+		\hline
+		3 & -0.0050 \\
+		\hline
+		4 & 0.0003 \\
+		\hline
+		5 & -0.0002 \\
+		\hline
+		6 & 0.0264 \\
+		\hline
+		7 & 0.3524 \\
+		\hline
+		8 & 0.0063 \\
+		\hline
+	\end{tabular}
+	\caption{Training Weights}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r| }
+		\hline
+		\textbf{Bias} & -2.7182 \\
+		\hline
+	\end{tabular}
+	\caption{Training Bias}
+\end{table}
+
+
+% B
+\subsection{SVML}
+
+\begin{verbatim}
+apply_svml.m
+\end{verbatim}
+
+\[ w^{T}x + b \geq 0 \]
+
+
+% C
+\subsection{Misclassification, Confusion, Sensitivity, Specificity}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r|r| }
+		\hline
+		\textbf{Dataset} & \textbf{Misclassification Error} & \textbf{Sensitivity} & \textbf{Specificity}\\
+		\hline
+		Training & 0.2319 & 0.5750 & 0.8820 \\
+		\hline
+		Testing & 0.1965 & 0.6176 & 0.8820 \\
+		\hline
+	\end{tabular}
+	\caption{Misclassification Error, Sensitivity, Specificity}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r| }
+		\hline
+		\textbf{Predict / Target} & \textbf{1} & \textbf{1} \\
+		\hline
+		\textbf{1} & 115 & 40 \\
+		\hline
+		\textbf{0} & 85 & 299 \\
+		\hline
+	\end{tabular}
+	\caption{Training Confusion Matrix}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r| }
+		\hline
+		\textbf{Predict / Target} & \textbf{1} & \textbf{1} \\
+		\hline
+		\textbf{1} & 42 & 19 \\
+		\hline
+		\textbf{0} & 26 & 142 \\
+		\hline
+	\end{tabular}
+	\caption{Test Confusion Matrix}
+\end{table}
+
+% D
+\subsection{LR. vs. NB vs. SVML}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |l|r|r|r| }
+		\hline
+		\textbf{Model} & \textbf{Misclassification} & \textbf{Sensitivity} & \textbf{Specificity} \\
+		\hline
+		LR & 0.2988 & 0.5900 & 0.8761 \\
+		\hline
+		NB & 0.4644 & 0.8400 & 0.5398 \\
+		\hline
+		SVML & 0.2319 & 0.5750 & 0.8820 \\
+		\hline
+	\end{tabular}
+	\caption{Training Model Comparison}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |l|r|r|r| }
+		\hline
+		\textbf{Model} & \textbf{Misclassification} & \textbf{Sensitivity} & \textbf{Specificity} \\
+		\hline
+		LR & 0.2722 & 0.6765 & 0.8323 \\
+		\hline
+		NB & 0.3759 & 0.8676 & 0.5093 \\
+		\hline
+		SVML & 0.1965 & 0.6176 & 0.8820 \\
+		\hline
+	\end{tabular}
+	\caption{Testing Model Comparison}
+\end{table}
+
+In all cases, the SVML model performed better than both Logistic Regression and Naïve Bayes from the assignment 5 implementation, with a lower sensitivity and a higher specificity.
+
+\section{Problem 2 - Deep Learning}
+
+% A
+\subsection{Deep Learning Toolbox}
+
+\begin{verbatim}
+logistic_NN.m
+\end{verbatim}
+
+% B
+\subsection{Multi-layer Neural Network}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |l|r|r|r| }
+		\hline
+		\textbf{Model} & \textbf{Hidden Layers} & \textbf{Hidden Units} & \textbf{Misclassification} \\
+		\hline
+		LR & 0 & - & 0.2356 \\
+		\hline
+		NN & 1 & 2 & 0.2263 \\
+		\hline
+		NN & 1 & 3 & 0.2171 \\
+		\hline
+		NN & 1 & 5 & 0.2263 \\
+		\hline
+		NN & 1 & 10 & 0.2393 \\
+		\hline
+	\end{tabular}
+	\caption{Training NN Comparison}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |l|r|r|r| }
+		\hline
+		\textbf{Model} & \textbf{Hidden Layers} & \textbf{Hidden Units} & \textbf{Misclassification} \\
+		\hline
+		LR & 0 & - & 0.2402 \\
+		\hline
+		NN & 1 & 2 & 0.2227 \\
+		\hline
+		NN & 1 & 3 & 0.2271 \\
+		\hline
+		NN & 1 & 5 & 0.2096 \\
+		\hline
+		NN & 1 & 10 & 0.1965 \\
+		\hline
+	\end{tabular}
+	\caption{Testing NN Comparison}
+\end{table}
+
+Overall, the Neural Network model produced better Misclassification errors than the Logistic Regression model on both training and testing data, proving to be a superior model in this case.
+
+
+\end{document}
