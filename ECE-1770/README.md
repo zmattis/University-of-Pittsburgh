@@ -20,6 +20,7 @@ Includes code for the following assignments:
 *   Flow Control
 *   Bubble Sort
 *   Functions and Subroutines
+*   GPIO
 
 ## Project Description
 
@@ -28,6 +29,7 @@ Register Memory -- Source code debugging and memory analysis <br />
 Flow Control -- Assembly branching and looping control <br />
 Bubble Sort -- 1D array sorting implementation <br />
 Functions / Subroutines -- Functions and stack manipulation <br />
+GPIO -- GPIO interfacing using memory-mapped IO <br />
 
 ## License
 
