@@ -1,8 +1,8 @@
 # University of Pittsburgh
 
-[![License: MIT](https://img.shields.io/github/license/zmattis/University-of-Pittsburgh.svg?color=brightgreen&style=for-the-badge)](https://opensource.org/licenses/MIT)
-![Languages](https://img.shields.io/github/languages/count/zmattis/University-of-Pittsburgh.svg?style=for-the-badge)
-![Code Size](https://img.shields.io/github/languages/code-size/zmattis/University-of-Pittsburgh.svg?color=orange&style=for-the-badge)
+[![License: MIT](https://img.shields.io/github/license/zmattis/University-of-Pittsburgh.svg?color=brightgreen&style=popout-square)](https://opensource.org/licenses/MIT)
+![Languages](https://img.shields.io/github/languages/count/zmattis/University-of-Pittsburgh.svg?style=popout-square)
+![Code Size](https://img.shields.io/github/languages/code-size/zmattis/University-of-Pittsburgh.svg?color=orange&style=popout-square)
 
 Repository containing the assignments I completed as an undergraduate Computer Engineering major at the University of Pittsburgh.
 
