@@ -18,9 +18,9 @@ Includes code for the following assignments:
 
 <dl>
   <dt>Graphics Library</dt>
-  <dd>graph lib</dd>
+  <dd>Library to draw shapes and set pixels of terminal via memory framebuffer manipulation.</dd>
   <dt>Syscalls</dt>
-  <dd>sys call</dd>
+  <dd>Traffic Simulation program utilizing user-implemented Kernel Space semaphore system calls</dd>
   <dt>Virtual Memory</dt>
   <dd>virt mem</dd>
   <dt>File System</dt>
