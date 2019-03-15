@@ -55,6 +55,8 @@ $ ./hilbert
   <dd>Advanced C driver program using the library to create a Hilbert curve</dd>
   <dt>terminal_reset.c</dt>
   <dd>C application to reset terminal keypad echoing and buffering</dd>
+  <dt>qemu-arm.zip</dt>
+  <dd>Linux Kernel emulator</dd>
   <dt>graphics_library_description.pdf</dt>
   <dd>PDF description from professor</dd>
 </dl>
@@ -71,6 +73,9 @@ Library
 
 Utility
   - terminal_reset.c
+
+Kernel
+  - qemu-arm.zip
 
 ## License
 
