@@ -12,19 +12,19 @@ Includes code for the following assignments:
   - Graphics Library
   - Syscalls
   - Virtual Memory
-  - File System
+  - FUSE File System
 
 ## Project Description
 
 <dl>
   <dt>Graphics Library</dt>
-  <dd>Library to draw shapes and set pixels of terminal via memory framebuffer manipulation.</dd>
+  <dd>Library to draw shapes and set pixels of terminal via memory framebuffer manipulation</dd>
   <dt>Syscalls</dt>
   <dd>Traffic Simulation program utilizing user-implemented Kernel Space semaphore system calls</dd>
   <dt>Virtual Memory</dt>
-  <dd>virt mem</dd>
-  <dt>File System</dt>
-  <dd>fs</dd>
+  <dd>Virtual Memory page replacement algorithm simulator and analysis documentation</dd>
+  <dt>FUSE File System</dt>
+  <dd>User-space application that implements the system calls for a mounted filesystem</dd>
 </dl>
 
 ## License
