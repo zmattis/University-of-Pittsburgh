@@ -1,31 +1,37 @@
-# CS 0449
+# CS 0449 - Systems Software
 
-Introduction to Systems Software
+This course covers topics related to the interface of hardware and software.  It covers device interface and hardware synchronization at the loWest level of the operating system, the linkage of operating system services to application software, and the fundamental mechanisms for computer communications.
 
 ## Description
 
-This subfolder contains projects for CS0449, taught by Joanthan Misurda during the Summer semester of 2017. They are written 
-in the C programming language.
+This subfolder contains projects for CS0449, taught by Dr. Jonathan Misurda during the Summer semester of 2017 (Term 2177). They are written in the C programming language.
 
 ## Projects
 
-Includes code for the following assignements:
-
-*   Blackjack
-*   ID3 v1.1 Tag Editor
-*   Custom Strings()
-*   Password Cracking
-*   Custom Malloc()
-*   Linux Device Driver
+Includes code for the following assignments:
+  - Blackjack
+  - ID3 v1.1 Tag Editor
+  - Custom Strings()
+  - Password Cracking
+  - Memory Allocation
+  - Linux Device Driver
 
 ## Project Description
 
-Blackjack -- Multiplayer card game of 21 vs. a computer <br />
-ID3 Tag Editor -- Metadata tag that can be added to .ogg files to describe their content <br />
-Custom Strings() -- Outputs strings of printable characters from a file (ASCII 32 < x < ASCII 126) <br />
-Password Cracking -- Inspection of x86 assembly using gcc gdb to enter a password protected file <br />
-Custom Malloc() -- Mememory manipulation w/ both allocation and de-allocation functions. <br />
-Linux Device Driver -- Pi device driver that returns the digits of pi. <br />
+<dl>
+  <dt>Blackjack</dt>
+  <dd>Multiplayer card game of 21 vs. a computer</dd>
+  <dt>ID3 v1.1 Tag Editor</dt>
+  <dd>Metadata tag that can be added to .ogg files to describe their content</dd>
+  <dt>Custom Strings()</dt>
+  <dd>Outputs strings of printable characters from a file (ASCII 32 < x < ASCII 126)</dd>
+  <dt>Password Cracking</dt>
+  <dd>Inspection of x86 assembly using gcc gdb to enter a password protected file</dd>
+  <dt>Memory Allocation</dt>
+  <dd>Memory heap manipulation via allocation and de-allocation functions</dd>
+  <dt>Linux Device Driver</dt>
+  <dd>Pi device driver that returns the digits of pi</dd>
+</dl>
 
 ## License
 
