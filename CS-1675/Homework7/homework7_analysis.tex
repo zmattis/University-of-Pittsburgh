@@ -1,0 +1,132 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subfig}
+\graphicspath{ {./img/} }
+\setlength\parindent{0pt}
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\alph{subsection}.}
+
+
+\title{CS1675 - Assignment 7}
+\author{Zachary M. Mattis}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1 - Decision Trees}
+
+% A
+\subsection{Restricted vs. Unrestricted}
+
+The unrestricted tree is very dense, and may be prone to over-fitting.  In this case, the unrestricted tree had a test error of 0.2751, while the restricted tree had a 0.2576 error.  In general, to backpruning is a useful tool, as it improves predictive accuracy by the reduction of overfitting.
+
+
+% B
+\subsection{fitctree}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r|r| }
+		\hline
+		\textbf{Min Parents} & \textbf{20} & \textbf{25} & \textbf{30} \\
+		\hline
+		\textbf{15} & 0.2314 & - & 0.2227 \\
+		\hline
+		\textbf{20} & 0.2358 & 0.2358 & 0.2358 \\
+		\hline
+		\textbf{25} & 0.2402 & 0.2402 & 0.2707 \\
+		\hline
+	\end{tabular}
+	\caption{Error = f(Min\_Parents, Max\_Split)}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r|r| }
+		\hline
+		\textbf{Min Leaf} & \textbf{5} & \textbf{10} & \textbf{15} \\
+		\hline
+		\textbf{15} & 0.2358 & 0.2358 & 0.2227 \\
+		\hline
+		\textbf{20} & 0.2445 & 0.2489 & 0.2533 \\
+		\hline
+		\textbf{25} & 0.2489 & 0.2489 & 0.2445 \\
+		\hline
+	\end{tabular}
+	\caption{Error = f(Min\_Leaf, Max\_Split)}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r|r| }
+		\hline
+		\textbf{Prune, Parent, Leaf} & \textbf{1, 20, 10} & \textbf{1, 20, 15} & \textbf{2, 20, 10} \\
+		\hline
+		\textbf{15} & 0.2314 & 0.2314 & 0.2314 \\
+		\hline
+		\textbf{20} & 0.2227 & 0.2227 & 0.2314 \\
+		\hline
+		\textbf{25} & 0.2227 & 0.2140 & 0.2314 \\
+		\hline
+	\end{tabular}
+	\caption{Error = f(Prune, Parent, Leaf, Max\_Split)}
+\end{table}
+
+
+The lowest error result I obtained was 0.2009, using max splits=35, leaf=7, parent=20, pruning level 1.
+
+
+\section{Problem 2 - Probabilities: Bayes' Theorem}
+
+$P(disease) = 0.0001$ \\
+$P(healthy) = 0.9999$ \\
+$P(test = + | disease) = 0.99$ \\
+$P(test = + | healthy) = 0.01$ \\
+$P(test = - | disease) = 0.01$ \\
+$P(test = - | healthy) = 0.99$ \\
+
+$P(disease | test = +) = \frac{P(test = + | disease)P(disease)}{P(test = +)}$ \\
+
+\begin{equation*}
+\begin{split}
+P(test = +) &= P(test = + | disease)P(disease) + P(test = + | healthy)P(healthy)\\
+&= (0.99)(0.0001) + (0.01)(0.9999)\\
+&= 0.010098
+\end{split}
+\end{equation*}
+
+
+
+$P(disease | test = +) = \frac{(.99)(.0001)}{0.010098} = 0.0098$ \\ \\
+
+Given a less than 1\% chance that somebody who tested positive for disease actually suffers from the disease, it is not advisable for this test to become widely adopted. 
+
+
+
+\section{Bayesian Belief Networks}
+
+1. $P(X,Y|Z) = P(X|Z)P(Y|Z)$\\
+2. $P(X|Y,Z) = P(X|Z)$
+
+\begin{equation*}
+\begin{split}
+P(X|Y,Z) &= \frac{P(X,Y,Z)}{P(Y,Z)} \qquad \text{(cond. prob.)}\\
+&= \frac{P(X,Y|Z)P(Z)}{P(Y,Z)} \qquad \text{(product rule)}\\
+&= \frac{P(X|Z)P(Y|Z)P(Z)}{P(Y,Z)} \qquad \text{(cond. ind.)}\\
+&= \frac{P(X|Z)P(Y,Z)}{P(Y,Z)} \qquad \text{(cond. prob.)} \label{eq1}\\
+&= P(X|Z)
+\end{split}
+\end{equation*}
+
+
+
+\end{document}
