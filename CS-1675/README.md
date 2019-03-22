@@ -4,7 +4,7 @@ This introductory machine learning course will give an overview of many models a
 
 ## Description
 
-This subfolder contains projects for CS1675, taught by Dr. Milos Hauskrecht during the Spring semester of 2018-2019. They are written using Matlab.
+This subfolder contains projects for CS1675, taught by Dr. Milos Hauskrecht during the Spring semester of 2018-2019 (Term 2197). They are written using Matlab.
 
 ## Projects
 
