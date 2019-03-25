@@ -1,6 +1,6 @@
 # CS 0449 - Systems Software
 
-This course covers topics related to the interface of hardware and software.  It covers device interface and hardware synchronization at the loWest level of the operating system, the linkage of operating system services to application software, and the fundamental mechanisms for computer communications.
+This course covers topics related to the interface of hardware and software. It covers device interface and hardware synchronization at the lowest level of the operating system, the linkage of operating system services to application software, and the fundamental mechanisms for computer communications.
 
 ## Description
 
@@ -14,7 +14,7 @@ Includes code for the following assignments:
   - Custom Strings()
   - Password Cracking
   - Memory Allocation
-  - Linux Device Driver
+  - Pi Linux Device Driver
 
 ## Project Description
 
@@ -29,8 +29,8 @@ Includes code for the following assignments:
   <dd>Inspection of x86 assembly using gcc gdb to enter a password protected file</dd>
   <dt>Memory Allocation</dt>
   <dd>Memory heap manipulation via allocation and de-allocation functions</dd>
-  <dt>Linux Device Driver</dt>
-  <dd>Pi device driver that returns the digits of pi</dd>
+  <dt>Pi Linux Device Driver</dt>
+  <dd>Linux device driver that returns the digits of pi</dd>
 </dl>
 
 ## License
