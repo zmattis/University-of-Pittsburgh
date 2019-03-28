@@ -1,4 +1,4 @@
-%%% learns a simple NN network for classification with one (output) unit 
+%%% learns a simple NN network for classification with one (output) unit
 %%% with sigmoidal function
 %%% *************************************************************
 %%% Milos Hauskrecht
@@ -18,7 +18,7 @@ n_features = data_col - 1;
 x = tr_data(:,1:n_features);
 %% create y vector
 y=tr_data(:,data_col);
- 
+
 %% builds x for the the test set
 x_test = test_data(:,1:n_features);
 %% builds y vector for the test set
@@ -41,7 +41,7 @@ net.trainParam.max_fail=1500;
 net.trainParam.min_grad=1e-10;
 
 %%% training of the neural net
-[net, tr] = train(net,x',y') 
+[net, tr] = train(net,x',y')
 
 %% runs learned network on inputs in x (training set)
 res=net(x');

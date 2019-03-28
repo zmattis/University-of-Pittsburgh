@@ -1,12 +1,12 @@
 % /**
 %  * @author Zachary M. Mattis
 %  * CS 1675
-%  * Assignment 5
-%  * February 21, 2019
+%  * Assignment 6
+%  * February 27, 2019
 %  *
 %  * This Matlab file is used to calculate the
-%  * confusion matrix, misclassification error, 
-%  * sensitivity, and specificity for both the 
+%  * confusion matrix, misclassification error,
+%  * sensitivity, and specificity for both the
 %  * training and testing "pima" set.
 %  */
 

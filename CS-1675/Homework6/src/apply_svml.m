@@ -4,7 +4,7 @@
 %  * Assignment 6
 %  * February 27, 2019
 %  *
-%  * This Matlab file is a function that calculates the 
+%  * This Matlab file is a function that calculates the
 %  * class decision of a Linear SVM, using parameters:
 %  *     x - vector
 %  *     w - weight

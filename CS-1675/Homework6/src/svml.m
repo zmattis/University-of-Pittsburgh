@@ -1,6 +1,6 @@
 %%% converts 0,1 class labels to -1,1
 %%  and calls Lagrangian SVM code by O. L. Mangasarian and D.R. Musicant
-%% 
+%%
 %% input: Xs,Ys, and costs for crossing the margin
 %% output: weights + bias term   wx+b=0 is the separating hyperplane
 
