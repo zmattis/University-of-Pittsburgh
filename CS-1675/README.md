@@ -15,6 +15,7 @@ Includes code for the following assignments:
   - Homework 5 - Naive Bayes
   - Homework 6 - Support Vector Machines
   - Homework 7 - Decision Trees
+  - Homework 8 - Bayesian Belief Network
 
 ## Project Description
 
@@ -31,6 +32,8 @@ Includes code for the following assignments:
   <dd>Support Vector Machine hyperplane analysis</dd>
   <dt>Homework 7</dt>
   <dd>Decision Tree classification analysis</dd>
+  <dt>Homework 8</dt>
+  <dd>Bayesian Belief Network analysis and pneumonia diagnosis</dd>
 </dl>
 
 ## License
