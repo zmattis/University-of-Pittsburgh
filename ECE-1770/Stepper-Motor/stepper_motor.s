@@ -98,13 +98,12 @@ __main	PROC
     BIC r1, r1, r2
     STR r1, [r0, #GPIO_PUPDR]	 ; store PUPDR
 
-    ; 5000 clock cycles to delay
-    LDR r0, =0x1388
+
 
 full_step_run
 
     LDR r1, =GPIOB_BASE
-    LDR r4, =steps_full
+    LDR r4, =steps_full_cw
     LDR r5, =0x0800    ; 2048
     LDR r6, =0x04      ; steps_full_size
     LDR r7, =0x00      ; i
@@ -120,11 +119,14 @@ full_step_loop
 
 full_step_skip
 
+    ; 5000 clock cycles to delay
+    LDR r0, =0x1388
+
     ; port B ODR
     LDR r3, [r4], #0x04
     LDR r2, [r1, #GPIO_ODR]
     BIC r2, r2, #0x000000CC ; clear bits 2,3,6,7
-    ORR r2, r2, r3          ; steps_full[j]
+    ORR r2, r2, r3          ; steps_full_cw[j]
     STR r2, [r1, #GPIO_ODR]
 
     ADD r7, #0x01            ; i++
@@ -138,7 +140,7 @@ full_step_skip
 half_step_run
 
     LDR r1, =GPIOB_BASE
-    LDR r4, =steps_half
+    LDR r4, =steps_half_ccw
     LDR r5, =0x1000    ; 4096
     LDR r6, =0x08      ; steps_half_size
     LDR r7, =0x00      ; i
@@ -154,11 +156,14 @@ half_step_loop
 
 half_step_skip
 
+    ; 5000 clock cycles to delay
+    LDR r0, =0x1388
+
     ; port B ODR
     LDR r3, [r4], #0x04
     LDR r2, [r1, #GPIO_ODR]
     BIC r2, r2, #0x000000CC ; clear bits 2,3,6,7
-    ORR r2, r2, r3          ; steps_half[j]
+    ORR r2, r2, r3          ; steps_half_ccw[j]
     STR r2, [r1, #GPIO_ODR]
 
     ADD r7, #0x01            ; i++
@@ -189,6 +194,8 @@ delay	PROC
 
     AREA    myData, DATA, READWRITE
     ALIGN
-steps_full  DCD   0x84, 0x44, 0x48, 0x88
-steps_half  DCD   0x84, 0x04, 0x44, 0x40, 0x48, 0x08, 0x88, 0x80
+steps_full_cw   DCD    0x84, 0x44, 0x48, 0x88
+steps_full_ccw  DCD    0x88, 0x48, 0x44, 0x84
+steps_half_cw   DCD    0x84, 0x04, 0x44, 0x40, 0x48, 0x08, 0x88, 0x80
+steps_half_ccw  DCD    0x80, 0x88, 0x08, 0x48, 0x40, 0x44, 0x04, 0x84
     END
