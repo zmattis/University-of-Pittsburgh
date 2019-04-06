@@ -1020,7 +1020,7 @@ typedef struct
   __IO uint32_t DR;  /*!< RNG data register,    Address offset: 0x08 */
 } RNG_TypeDef;
 
-/** 
+/**
   * @brief USB_OTG_Core_register
   */
 typedef struct
@@ -1042,7 +1042,7 @@ typedef struct
   __IO uint32_t CID;                  /* User ID Register                                03Ch*/
   uint32_t  Reserved5[3];             /* Reserved                                        040h-048h*/
   __IO uint32_t GHWCFG3;              /* User HW config3                                 04Ch*/
-  uint32_t  Reserved6;                /* Reserved                                        050h*/ 
+  uint32_t  Reserved6;                /* Reserved                                        050h*/
   __IO uint32_t GLPMCFG;              /* LPM Register                                    054h*/
   __IO uint32_t GPWRDN;               /* Power Down Register                             058h*/
   __IO uint32_t GDFIFOCFG;            /* DFIFO Software Config Register                  05Ch*/
@@ -1052,10 +1052,10 @@ typedef struct
   __IO uint32_t DIEPTXF[0x0F];        /* dev Periodic Transmit FIFO */
 } USB_OTG_GlobalTypeDef;
 
-/** 
+/**
   * @brief USB_OTG_device_Registers
   */
-typedef struct 
+typedef struct
 {
   __IO uint32_t DCFG;        /* dev Configuration Register   800h*/
   __IO uint32_t DCTL;        /* dev Control Register         804h*/
@@ -1072,17 +1072,17 @@ typedef struct
   __IO uint32_t DTHRCTL;     /* dev thr                      830h*/
   __IO uint32_t DIEPEMPMSK;  /* dev empty msk             834h*/
   __IO uint32_t DEACHINT;    /* dedicated EP interrupt       838h*/
-  __IO uint32_t DEACHMSK;    /* dedicated EP msk             83Ch*/  
+  __IO uint32_t DEACHMSK;    /* dedicated EP msk             83Ch*/
   uint32_t Reserved40;       /* dedicated EP mask           840h*/
   __IO uint32_t DINEP1MSK;   /* dedicated EP mask           844h*/
   uint32_t  Reserved44[15];  /* Reserved                 844-87Ch*/
-  __IO uint32_t DOUTEP1MSK;  /* dedicated EP msk            884h*/   
+  __IO uint32_t DOUTEP1MSK;  /* dedicated EP msk            884h*/
 } USB_OTG_DeviceTypeDef;
 
-/** 
+/**
   * @brief USB_OTG_IN_Endpoint-Specific_Register
   */
-typedef struct 
+typedef struct
 {
   __IO uint32_t DIEPCTL;     /* dev IN Endpoint Control Reg 900h + (ep_num * 20h) + 00h*/
   uint32_t Reserved04;       /* Reserved                       900h + (ep_num * 20h) + 04h*/
@@ -1094,10 +1094,10 @@ typedef struct
   uint32_t Reserved18;       /* Reserved  900h+(ep_num*20h)+1Ch-900h+ (ep_num * 20h) + 1Ch*/
 } USB_OTG_INEndpointTypeDef;
 
-/** 
+/**
   * @brief USB_OTG_OUT_Endpoint-Specific_Registers
   */
-typedef struct 
+typedef struct
 {
   __IO uint32_t DOEPCTL;     /* dev OUT Endpoint Control Reg  B00h + (ep_num * 20h) + 00h*/
   uint32_t Reserved04;       /* Reserved                      B00h + (ep_num * 20h) + 04h*/
@@ -1108,10 +1108,10 @@ typedef struct
   uint32_t Reserved18[2];    /* Reserved B00h + (ep_num * 20h) + 18h - B00h + (ep_num * 20h) + 1Ch*/
 } USB_OTG_OUTEndpointTypeDef;
 
-/** 
+/**
   * @brief USB_OTG_Host_Mode_Register_Structures
   */
-typedef struct 
+typedef struct
 {
   __IO uint32_t HCFG;        /* Host Configuration Register    400h*/
   __IO uint32_t HFIR;        /* Host Frame Interval Register   404h*/
@@ -1122,7 +1122,7 @@ typedef struct
   __IO uint32_t HAINTMSK;    /* Host All Channels Interrupt Mask 418h*/
 } USB_OTG_HostTypeDef;
 
-/** 
+/**
   * @brief USB_OTG_Host_Channel_Specific_Registers
   */
 typedef struct
@@ -5901,13 +5901,13 @@ typedef struct
 #define  RCC_CFGR_MCOPRE_0                   ((uint32_t)0x10000000U)      /*!<Bit 0 */
 #define  RCC_CFGR_MCOPRE_1                   ((uint32_t)0x20000000U)      /*!<Bit 1 */
 #define  RCC_CFGR_MCOPRE_2                   ((uint32_t)0x40000000U)      /*!<Bit 2 */
- 
+
 #define  RCC_CFGR_MCOPRE_DIV1                ((uint32_t)0x00000000U)      /*!< MCO is divided by 1 */
 #define  RCC_CFGR_MCOPRE_DIV2                ((uint32_t)0x10000000U)      /*!< MCO is divided by 2 */
 #define  RCC_CFGR_MCOPRE_DIV4                ((uint32_t)0x20000000U)      /*!< MCO is divided by 4 */
 #define  RCC_CFGR_MCOPRE_DIV8                ((uint32_t)0x30000000U)      /*!< MCO is divided by 8 */
 #define  RCC_CFGR_MCOPRE_DIV16               ((uint32_t)0x40000000U)      /*!< MCO is divided by 16 */
- 
+
 /* Legacy aliases */
 #define  RCC_CFGR_MCO_PRE                    RCC_CFGR_MCOPRE
 #define  RCC_CFGR_MCO_PRE_1                  RCC_CFGR_MCOPRE_DIV1
@@ -9127,20 +9127,20 @@ typedef struct
 #define USB_OTG_CHNUM_1                 ((uint32_t)0x00000002U)                 /*!<Bit 1 */
 #define USB_OTG_CHNUM_2                 ((uint32_t)0x00000004U)                 /*!<Bit 2 */
 #define USB_OTG_CHNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */
-#define USB_OTG_BCNT                    ((uint32_t)0x00007FF0U)                 /*!< Byte count */                                                                             
+#define USB_OTG_BCNT                    ((uint32_t)0x00007FF0U)                 /*!< Byte count */
 #define USB_OTG_DPID                    ((uint32_t)0x00018000U)                 /*!< Data PID */
 #define USB_OTG_DPID_0                  ((uint32_t)0x00008000U)                 /*!<Bit 0 */
-#define USB_OTG_DPID_1                  ((uint32_t)0x00010000U)                 /*!<Bit 1 */                                                                           
+#define USB_OTG_DPID_1                  ((uint32_t)0x00010000U)                 /*!<Bit 1 */
 #define USB_OTG_PKTSTS                  ((uint32_t)0x001E0000U)                 /*!< Packet status */
 #define USB_OTG_PKTSTS_0                ((uint32_t)0x00020000U)                 /*!<Bit 0 */
 #define USB_OTG_PKTSTS_1                ((uint32_t)0x00040000U)                 /*!<Bit 1 */
 #define USB_OTG_PKTSTS_2                ((uint32_t)0x00080000U)                 /*!<Bit 2 */
-#define USB_OTG_PKTSTS_3                ((uint32_t)0x00100000U)                 /*!<Bit 3 */                                                                         
+#define USB_OTG_PKTSTS_3                ((uint32_t)0x00100000U)                 /*!<Bit 3 */
 #define USB_OTG_EPNUM                   ((uint32_t)0x0000000FU)                 /*!< Endpoint number */
 #define USB_OTG_EPNUM_0                 ((uint32_t)0x00000001U)                 /*!<Bit 0 */
 #define USB_OTG_EPNUM_1                 ((uint32_t)0x00000002U)                 /*!<Bit 1 */
 #define USB_OTG_EPNUM_2                 ((uint32_t)0x00000004U)                 /*!<Bit 2 */
-#define USB_OTG_EPNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */                                                                            
+#define USB_OTG_EPNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */
 #define USB_OTG_FRMNUM                  ((uint32_t)0x01E00000U)                 /*!< Frame number */
 #define USB_OTG_FRMNUM_0                ((uint32_t)0x00200000U)                 /*!<Bit 0 */
 #define USB_OTG_FRMNUM_1                ((uint32_t)0x00400000U)                 /*!<Bit 1 */
@@ -9154,20 +9154,20 @@ typedef struct
 #define USB_OTG_CHNUM_1                 ((uint32_t)0x00000002U)                 /*!<Bit 1 */
 #define USB_OTG_CHNUM_2                 ((uint32_t)0x00000004U)                 /*!<Bit 2 */
 #define USB_OTG_CHNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */
-#define USB_OTG_BCNT                    ((uint32_t)0x00007FF0U)                 /*!< Byte count */                                                                         
+#define USB_OTG_BCNT                    ((uint32_t)0x00007FF0U)                 /*!< Byte count */
 #define USB_OTG_DPID                    ((uint32_t)0x00018000U)                 /*!< Data PID */
 #define USB_OTG_DPID_0                  ((uint32_t)0x00008000U)                 /*!<Bit 0 */
-#define USB_OTG_DPID_1                  ((uint32_t)0x00010000U)                 /*!<Bit 1 */                                                                         
+#define USB_OTG_DPID_1                  ((uint32_t)0x00010000U)                 /*!<Bit 1 */
 #define USB_OTG_PKTSTS                  ((uint32_t)0x001E0000U)                 /*!< Packet status */
 #define USB_OTG_PKTSTS_0                ((uint32_t)0x00020000U)                 /*!<Bit 0 */
 #define USB_OTG_PKTSTS_1                ((uint32_t)0x00040000U)                 /*!<Bit 1 */
 #define USB_OTG_PKTSTS_2                ((uint32_t)0x00080000U)                 /*!<Bit 2 */
-#define USB_OTG_PKTSTS_3                ((uint32_t)0x00100000U)                 /*!<Bit 3 */                                                                            
+#define USB_OTG_PKTSTS_3                ((uint32_t)0x00100000U)                 /*!<Bit 3 */
 #define USB_OTG_EPNUM                   ((uint32_t)0x0000000FU)                 /*!< Endpoint number */
 #define USB_OTG_EPNUM_0                 ((uint32_t)0x00000001U)                 /*!<Bit 0 */
 #define USB_OTG_EPNUM_1                 ((uint32_t)0x00000002U)                 /*!<Bit 1 */
 #define USB_OTG_EPNUM_2                 ((uint32_t)0x00000004U)                 /*!<Bit 2 */
-#define USB_OTG_EPNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */                                                                             
+#define USB_OTG_EPNUM_3                 ((uint32_t)0x00000008U)                 /*!<Bit 3 */
 #define USB_OTG_FRMNUM                  ((uint32_t)0x01E00000U)                 /*!< Frame number */
 #define USB_OTG_FRMNUM_0                ((uint32_t)0x00200000U)                 /*!<Bit 0 */
 #define USB_OTG_FRMNUM_1                ((uint32_t)0x00400000U)                 /*!<Bit 1 */
@@ -9270,21 +9270,21 @@ typedef struct
 
 
 /********************  Bit definition for USB_OTG_GHWCFG3 register  ********************/
-#define  USB_OTG_GHWCFG3_LPMMode              ((uint32_t)0x00004000U)           /* LPM mode specified for Mode of Operation */ 
+#define  USB_OTG_GHWCFG3_LPMMode              ((uint32_t)0x00004000U)           /* LPM mode specified for Mode of Operation */
 
 /********************  Bit definition for USB_OTG_GLPMCFG register  ********************/
-#define  USB_OTG_GLPMCFG_ENBESL                      ((uint32_t)0x10000000U)    /* Enable best effort service latency */ 
-#define  USB_OTG_GLPMCFG_LPMRCNTSTS                  ((uint32_t)0x0E000000U)    /* LPM retry count status */ 
-#define  USB_OTG_GLPMCFG_SNDLPM                      ((uint32_t)0x01000000U)    /* Send LPM transaction */ 
-#define  USB_OTG_GLPMCFG_LPMRCNT                     ((uint32_t)0x00E00000U)    /* LPM retry count */ 
-#define  USB_OTG_GLPMCFG_LPMCHIDX                    ((uint32_t)0x001E0000U)    /* LPMCHIDX: */ 
-#define  USB_OTG_GLPMCFG_L1ResumeOK                  ((uint32_t)0x00010000U)    /* Sleep State Resume OK */ 
-#define  USB_OTG_GLPMCFG_SLPSTS                      ((uint32_t)0x00008000U)    /* Port sleep status */ 
-#define  USB_OTG_GLPMCFG_LPMRSP                      ((uint32_t)0x00006000U)    /* LPM response */ 
-#define  USB_OTG_GLPMCFG_L1DSEN                      ((uint32_t)0x00001000U)    /* L1 deep sleep enable */ 
-#define  USB_OTG_GLPMCFG_BESLTHRS                    ((uint32_t)0x00000F00U)    /* BESL threshold */ 
-#define  USB_OTG_GLPMCFG_L1SSEN                      ((uint32_t)0x00000080U)    /* L1 shallow sleep enable */ 
-#define  USB_OTG_GLPMCFG_REMWAKE                     ((uint32_t)0x00000040U)    /* bRemoteWake value received with last ACKed LPM Token */ 
+#define  USB_OTG_GLPMCFG_ENBESL                      ((uint32_t)0x10000000U)    /* Enable best effort service latency */
+#define  USB_OTG_GLPMCFG_LPMRCNTSTS                  ((uint32_t)0x0E000000U)    /* LPM retry count status */
+#define  USB_OTG_GLPMCFG_SNDLPM                      ((uint32_t)0x01000000U)    /* Send LPM transaction */
+#define  USB_OTG_GLPMCFG_LPMRCNT                     ((uint32_t)0x00E00000U)    /* LPM retry count */
+#define  USB_OTG_GLPMCFG_LPMCHIDX                    ((uint32_t)0x001E0000U)    /* LPMCHIDX: */
+#define  USB_OTG_GLPMCFG_L1ResumeOK                  ((uint32_t)0x00010000U)    /* Sleep State Resume OK */
+#define  USB_OTG_GLPMCFG_SLPSTS                      ((uint32_t)0x00008000U)    /* Port sleep status */
+#define  USB_OTG_GLPMCFG_LPMRSP                      ((uint32_t)0x00006000U)    /* LPM response */
+#define  USB_OTG_GLPMCFG_L1DSEN                      ((uint32_t)0x00001000U)    /* L1 deep sleep enable */
+#define  USB_OTG_GLPMCFG_BESLTHRS                    ((uint32_t)0x00000F00U)    /* BESL threshold */
+#define  USB_OTG_GLPMCFG_L1SSEN                      ((uint32_t)0x00000080U)    /* L1 shallow sleep enable */
+#define  USB_OTG_GLPMCFG_REMWAKE                     ((uint32_t)0x00000040U)    /* bRemoteWake value received with last ACKed LPM Token */
 #define  USB_OTG_GLPMCFG_BESL                        ((uint32_t)0x0000003CU)    /* BESL value received with last ACKed LPM Token  */
 #define  USB_OTG_GLPMCFG_LPMACK                      ((uint32_t)0x00000002U)    /* LPM Token acknowledge enable*/
 #define  USB_OTG_GLPMCFG_LPMEN                       ((uint32_t)0x00000001U)    /* LPM support enable  */
@@ -9349,12 +9349,12 @@ typedef struct
 #define USB_OTG_DIEPCTL_USBAEP                  ((uint32_t)0x00008000U)         /*!< USB active endpoint */
 #define USB_OTG_DIEPCTL_EONUM_DPID              ((uint32_t)0x00010000U)         /*!< Even/odd frame */
 #define USB_OTG_DIEPCTL_NAKSTS                  ((uint32_t)0x00020000U)         /*!< NAK status */
-                                                                             
+
 #define USB_OTG_DIEPCTL_EPTYP                   ((uint32_t)0x000C0000U)         /*!< Endpoint type */
 #define USB_OTG_DIEPCTL_EPTYP_0                 ((uint32_t)0x00040000U)         /*!<Bit 0 */
 #define USB_OTG_DIEPCTL_EPTYP_1                 ((uint32_t)0x00080000U)         /*!<Bit 1 */
 #define USB_OTG_DIEPCTL_STALL                   ((uint32_t)0x00200000U)         /*!< STALL handshake */
-                                                                             
+
 #define USB_OTG_DIEPCTL_TXFNUM                  ((uint32_t)0x03C00000U)         /*!< TxFIFO number */
 #define USB_OTG_DIEPCTL_TXFNUM_0                ((uint32_t)0x00400000U)         /*!<Bit 0 */
 #define USB_OTG_DIEPCTL_TXFNUM_1                ((uint32_t)0x00800000U)         /*!<Bit 1 */
@@ -9369,7 +9369,7 @@ typedef struct
 
 /********************  Bit definition for USB_OTG_HCCHAR register  ********************/
 #define USB_OTG_HCCHAR_MPSIZ                   ((uint32_t)0x000007FFU)          /*!< Maximum packet size */
-                                                                              
+
 #define USB_OTG_HCCHAR_EPNUM                   ((uint32_t)0x00007800U)          /*!< Endpoint number */
 #define USB_OTG_HCCHAR_EPNUM_0                 ((uint32_t)0x00000800U)          /*!<Bit 0 */
 #define USB_OTG_HCCHAR_EPNUM_1                 ((uint32_t)0x00001000U)          /*!<Bit 1 */
@@ -9377,15 +9377,15 @@ typedef struct
 #define USB_OTG_HCCHAR_EPNUM_3                 ((uint32_t)0x00004000U)          /*!<Bit 3 */
 #define USB_OTG_HCCHAR_EPDIR                   ((uint32_t)0x00008000U)          /*!< Endpoint direction */
 #define USB_OTG_HCCHAR_LSDEV                   ((uint32_t)0x00020000U)          /*!< Low-speed device */
-                                                                              
+
 #define USB_OTG_HCCHAR_EPTYP                   ((uint32_t)0x000C0000U)          /*!< Endpoint type */
 #define USB_OTG_HCCHAR_EPTYP_0                 ((uint32_t)0x00040000U)          /*!<Bit 0 */
 #define USB_OTG_HCCHAR_EPTYP_1                 ((uint32_t)0x00080000U)          /*!<Bit 1 */
-                                                                              
+
 #define USB_OTG_HCCHAR_MC                      ((uint32_t)0x00300000U)          /*!< Multi Count (MC) / Error Count (EC) */
 #define USB_OTG_HCCHAR_MC_0                    ((uint32_t)0x00100000U)          /*!<Bit 0 */
 #define USB_OTG_HCCHAR_MC_1                    ((uint32_t)0x00200000U)          /*!<Bit 1 */
-                                                                              
+
 #define USB_OTG_HCCHAR_DAD                     ((uint32_t)0x1FC00000U)          /*!< Device address */
 #define USB_OTG_HCCHAR_DAD_0                   ((uint32_t)0x00400000U)          /*!<Bit 0 */
 #define USB_OTG_HCCHAR_DAD_1                   ((uint32_t)0x00800000U)          /*!<Bit 1 */
@@ -9408,7 +9408,7 @@ typedef struct
 #define USB_OTG_HCSPLT_PRTADDR_4               ((uint32_t)0x00000010U)          /*!<Bit 4 */
 #define USB_OTG_HCSPLT_PRTADDR_5               ((uint32_t)0x00000020U)          /*!<Bit 5 */
 #define USB_OTG_HCSPLT_PRTADDR_6               ((uint32_t)0x00000040U)          /*!<Bit 6 */
-                                                                               
+
 #define USB_OTG_HCSPLT_HUBADDR                 ((uint32_t)0x00003F80U)          /*!< Hub address */
 #define USB_OTG_HCSPLT_HUBADDR_0               ((uint32_t)0x00000080U)          /*!<Bit 0 */
 #define USB_OTG_HCSPLT_HUBADDR_1               ((uint32_t)0x00000100U)          /*!<Bit 1 */
@@ -9417,7 +9417,7 @@ typedef struct
 #define USB_OTG_HCSPLT_HUBADDR_4               ((uint32_t)0x00000800U)          /*!<Bit 4 */
 #define USB_OTG_HCSPLT_HUBADDR_5               ((uint32_t)0x00001000U)          /*!<Bit 5 */
 #define USB_OTG_HCSPLT_HUBADDR_6               ((uint32_t)0x00002000U)          /*!<Bit 6 */
-                                                                               
+
 #define USB_OTG_HCSPLT_XACTPOS                 ((uint32_t)0x0000C000U)          /*!< XACTPOS */
 #define USB_OTG_HCSPLT_XACTPOS_0               ((uint32_t)0x00004000U)          /*!<Bit 0 */
 #define USB_OTG_HCSPLT_XACTPOS_1               ((uint32_t)0x00008000U)          /*!<Bit 1 */
@@ -9962,7 +9962,7 @@ typedef struct
                                              ((INSTANCE) == TIM2)  || \
                                              ((INSTANCE) == TIM3)  || \
                                              ((INSTANCE) == TIM8))
-      
+
 /****** TIM Instances : Master mode available (TIMx_CR2.MMS available )********/
 #define IS_TIM_MASTER_INSTANCE(INSTANCE)   (((INSTANCE) == TIM1)  || \
                                             ((INSTANCE) == TIM2)  || \
@@ -10114,7 +10114,7 @@ typedef struct
 /*  For a painless codes migration between the STM32L4xx device product       */
 /*  lines, the aliases defined below are put in place to overcome the         */
 /*  differences in the interrupt handlers and IRQn definitions.               */
-/*  No need to update developed interrupt code when moving across             */ 
+/*  No need to update developed interrupt code when moving across             */
 /*  product lines within the same STM32L4 Family                              */
 /******************************************************************************/
 

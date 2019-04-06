@@ -3,20 +3,20 @@
 ; @author  Yifeng Zhu
 ; @date    May-17-2015
 ; @note
-;           This code is for the book "Embedded Systems with ARM Cortex-M 
-;           Microcontrollers in Assembly Language and C, Yifeng Zhu, 
+;           This code is for the book "Embedded Systems with ARM Cortex-M
+;           Microcontrollers in Assembly Language and C, Yifeng Zhu,
 ;           ISBN-13: 978-0982692639, ISBN-10: 0982692633
 ; @attension
-;           This code is provided for education purpose. The author shall not be 
-;           held liable for any direct, indirect or consequential damages, for any 
-;           reason whatever. More information can be found from book website: 
+;           This code is provided for education purpose. The author shall not be
+;           held liable for any direct, indirect or consequential damages, for any
+;           reason whatever. More information can be found from book website:
 ;           http:;www.eece.maine.edu/~zhu/book
 ;*******************************************************************************
 
 
 ; This following is added to remove the compiler warning.
     AREA    __DEFINES_STM32L4_xx_DUMMY, CODE, READONLY
-				
+
 ; Configuration of the Cortex-M4 Processor and Core Peripherals
 
 __CM4_REV           EQU 0x0001  ; Cortex-M4 revision r0p1
@@ -469,7 +469,7 @@ PWR_PDCRF  EQU  0x4C  ; Pull_Down control register of portF, Address offset: 0x4
 PWR_PUCRG  EQU  0x50  ; Pull_up control register of portG,   Address offset: 0x50
 PWR_PDCRG  EQU  0x54  ; Pull_Down control register of portG, Address offset: 0x54
 PWR_PUCRH  EQU  0x58  ; Pull_up control register of portH,   Address offset: 0x58
-PWR_PDCRH  EQU  0x5C  ; Pull_Down control register of portH, Address offset: 0x5C 
+PWR_PDCRH  EQU  0x5C  ; Pull_Down control register of portH, Address offset: 0x5C
 
 
 ; QUAD Serial Peripheral Interface
@@ -580,7 +580,7 @@ RTC_BKP27R     EQU  0xB0   ; RTC backup register 27,                            
 RTC_BKP28R     EQU  0xC0   ; RTC backup register 28,                                    Address offset: 0xC0
 RTC_BKP29R     EQU  0xC0   ; RTC backup register 29,                                    Address offset: 0xC4
 RTC_BKP30R     EQU  0xC0   ; RTC backup register 30,                                    Address offset: 0xC8
-RTC_BKP31R     EQU  0xC0   ; RTC backup register 31,                                    Address offset: 0xCC 
+RTC_BKP31R     EQU  0xC0   ; RTC backup register 31,                                    Address offset: 0xCC
 
 
 ; Serial Audio Interface
@@ -820,13 +820,13 @@ USB_OTG_Host_HAINT    EQU  0x414  ; Host All Channels Interrupt Register 414h
 USB_OTG_Host_HAINTMSK EQU  0x418  ; Host All Channels Interrupt Mask 418h
 
 ; USB_OTG_Host_Channel_Specific_Registers
-USB_OTG_HostChannel_HCCHAR    EQU  0x00  
-USB_OTG_HostChannel_HCSPLT    EQU  0x04  
-USB_OTG_HostChannel_HCINT     EQU  0x08  
-USB_OTG_HostChannel_HCINTMSK  EQU  0x0C  
-USB_OTG_HostChannel_HCTSIZ    EQU  0x10  
-USB_OTG_HostChannel_HCDMA     EQU  0x14  
-USB_OTG_HostChannel_Reserved  EQU  0x18  
+USB_OTG_HostChannel_HCCHAR    EQU  0x00
+USB_OTG_HostChannel_HCSPLT    EQU  0x04
+USB_OTG_HostChannel_HCINT     EQU  0x08
+USB_OTG_HostChannel_HCINTMSK  EQU  0x0C
+USB_OTG_HostChannel_HCTSIZ    EQU  0x10
+USB_OTG_HostChannel_HCDMA     EQU  0x14
+USB_OTG_HostChannel_Reserved  EQU  0x18
 
 ; Peripheral_memory_map
 FLASH_BASE    EQU (0x08000000) ; FLASH(up to 1 MB) base address
