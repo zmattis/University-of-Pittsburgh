@@ -33,7 +33,7 @@ $ ./weather_client
 <dl>
   <dt>weather_client.c</dt>
   <dd>Client application, connects to API and retrieves weather conditions</dd>
-  <dt>weather_client_analysis.docx --</dt>
+  <dt>weather_client_analysis.docx</dt>
   <dd>Analysis document of client running</dd>
   <dt>weather_client_description.pdf</dt>
   <dd>Project description from professor</dd>
@@ -41,7 +41,7 @@ $ ./weather_client
 
 ## Project Hierarchy
 
-Driver:
+Driver
   - weather_client.c
 
 ## License
