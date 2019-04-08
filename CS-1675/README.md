@@ -9,14 +9,15 @@ This subfolder contains projects for CS1675, taught by Dr. Milos Hauskrecht duri
 ## Projects
 
 Includes code for the following assignments:
-  - Homework 1 - Data Analysis
-  - Homework 3 - Maximum Likelihood Estimation
-  - Homework 4 - Linear Regression
-  - Homework 5 - Naive Bayes
-  - Homework 6 - Support Vector Machines
-  - Homework 7 - Decision Trees
-  - Homework 8 - Bayesian Belief Network
-  - Homework 9 - K-Means Clustering
+  - Homework 1  - Data Analysis
+  - Homework 3  - Maximum Likelihood Estimation
+  - Homework 4  - Linear Regression
+  - Homework 5  - Naive Bayes
+  - Homework 6  - Support Vector Machines
+  - Homework 7  - Decision Trees
+  - Homework 8  - Bayesian Belief Network
+  - Homework 9  - K-Means Clustering
+  - Homework 10 - Classifier Bagging
 
 ## Project Description
 
@@ -37,6 +38,8 @@ Includes code for the following assignments:
   <dd>Bayesian Belief Network analysis and pneumonia diagnosis</dd>
   <dt>Homework 9</dt>
   <dd>K-Means Clustering unsupervised learning algorithm</dd>
+  <dt>Classifier Bagging</dt>
+  <dd>Bagging of Classifiers and feature selection ranking</dd>
 </dl>
 
 ## License

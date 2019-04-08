@@ -1,0 +1,148 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subfig}
+\graphicspath{ {./img/} }
+\setlength\parindent{0pt}
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\alph{subsection}.}
+
+
+\title{CS1675 - Assignment 10}
+\author{Zachary M. Mattis}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1 - Feature/Input Ranking}
+
+
+% A
+\subsection{Fisher\_score(x, y)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r| }
+		\hline
+		\textbf{Rank} & \textbf{Fisher Score} & \textbf{Index} \\
+		\hline
+		1 & 0.3192 & 48 \\
+		\hline
+		2 & 0.2140 & 25 \\
+		\hline
+		3 & 0.1910 & 21 \\
+		\hline
+		4 & 0.1892 & 70 \\
+		\hline
+		5 & 0.1693 & 65 \\
+		\hline		
+		6 & 0.1673 & 40 \\
+		\hline
+		7 & 0.1650 & 29 \\
+		\hline
+		8 & 0.1402 & 19 \\
+		\hline
+		9 & 0.1255 & 57 \\
+		\hline
+		10 & 0.1212 & 20 \\
+		\hline
+		11 & 0.0995 & 24 \\
+		\hline
+		12 & 0.0950 & 30 \\
+		\hline
+		13 & 0.0858 & 12 \\
+		\hline
+		14 & 0.0846 & 47 \\
+		\hline
+		15 & 0.0607 & 61 \\
+		\hline
+		16 & 0.0579 & 10 \\
+		\hline
+		17 & 0.0527 & 34 \\
+		\hline
+		18 & 0.0462 & 27 \\
+		\hline
+		19 & 0.0461 & 39 \\
+		\hline
+		20 & 0.0422 & 41 \\
+		\hline
+	\end{tabular}
+	\caption{Fisher Score, FeatureSelectionData.txt}
+\end{table}
+
+
+% B
+\subsection{AUROC\_score(x, y)}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ |r|r|r| }
+		\hline
+		\textbf{Rank} & \textbf{Fisher Score} & \textbf{Index} \\
+		\hline
+		1 & 0.7340 & 25 \\
+		\hline
+		2 & 0.7133 & 48 \\
+		\hline
+		3 & 0.6887 & 40 \\
+		\hline
+		4 & 0.6837 & 29 \\
+		\hline
+		5 & 0.6833 & 21 \\
+		\hline		
+		6 & 0.6730 & 67 \\
+		\hline
+		7 & 0.6707 & 70 \\
+		\hline
+		8 & 0.6695 & 11 \\
+		\hline
+		9 & 0.6661 & 47 \\
+		\hline
+		10 & 0.6620 & 65 \\
+		\hline
+		11 & 0.6459 & 12 \\
+		\hline
+		12 & 0.6432 & 24 \\
+		\hline
+		13 & 0.6412 & 39 \\
+		\hline
+		14 & 0.6383 & 6 \\
+		\hline
+		15 & 0.6315 & 19 \\
+		\hline
+		16 & 0.6270 & 57 \\
+		\hline
+		17 & 0.6280 & 20 \\
+		\hline
+		18 & 0.6174 & 34 \\
+		\hline
+		19 & 0.6168 & 5 \\
+		\hline
+		20 & 0.6090 & 14 \\
+		\hline
+	\end{tabular}
+	\caption{AUROC Score, FeatureSelectionData.txt}
+\end{table}
+
+
+There are a total of 15 shared dimensions between the two result sets. They are not in the same order, but they are relatively close. This is expected as the dimensions that have the greatest predictive power should be very similar across different interpretative algorithms.
+
+
+\section{Problem 2 - Bagging of Classifiers}
+
+% A
+\subsection{SVM}
+
+
+
+% B
+\subsection{SVM lol}
+
+
+
+\end{document}
