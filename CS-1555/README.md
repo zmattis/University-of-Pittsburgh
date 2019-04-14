@@ -12,6 +12,7 @@ Includes code for the following assignments:
   - ER Modeling
   - Relational Algebra
   - Triggers
+  - Transaction Serialization
 
 ## Project Description
 
@@ -22,6 +23,8 @@ Includes code for the following assignments:
   <dd>Data modeling for relational databases</dd>
   <dt>Triggers</dt>
   <dd>Database triggers to respond to SQL transactions</dd>
+  <dt>Transaction Serialization</dt>
+  <dd>Database Transaction concurrency analysis and 2PL (Two-Phase Locking) serialization</dd>
 </dl>
 
 
