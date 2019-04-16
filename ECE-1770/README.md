@@ -21,6 +21,7 @@ Includes code for the following assignments:
   - Functions and Subroutines
   - GPIO
   - Stepper Motor
+  - SysTick and RTC
 
 ## Project Description
 
@@ -39,6 +40,8 @@ Includes code for the following assignments:
   <dd>GPIO interfacing using memory-mapped IO</dd>
   <dt>Stepper Motor</dt>
   <dd>Stepper Motor full-stepping and half-stepping</dd>
+  <dt>SysTick and RTC</dt>
+  <dd>System Timer interrupts and real-time clock (RTC) reading</dd>
 </dl>
 
 ## License
