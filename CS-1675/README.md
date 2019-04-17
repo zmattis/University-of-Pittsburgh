@@ -38,7 +38,7 @@ Includes code for the following assignments:
   <dd>Bayesian Belief Network analysis and pneumonia diagnosis</dd>
   <dt>Homework 9</dt>
   <dd>K-Means Clustering unsupervised learning algorithm</dd>
-  <dt>Classifier Bagging</dt>
+  <dt>Homework 10</dt>
   <dd>Bagging of Classifiers and feature selection ranking</dd>
 </dl>
 
