@@ -4,6 +4,9 @@ void config_NVIC_in_C()
 {
   NVIC_SetPriority(SysTick_IRQn, 1);    // Set Priority to 1
   NVIC_EnableIRQ(SysTick_IRQn);         // Enable EXTI0_1 interrupt in NVIC
+
+  NVIC_SetPriority(RTC_Alarm_IRQn, 0);  // Set Priority to 2
+  NVIC_EnableIRQ(RTC_Alarm_IRQn);       // Enable RTC Alarm (A and B) interrupt in NVIC
 }
 
 void System_Clock_Init(void){
@@ -12,6 +15,7 @@ void System_Clock_Init(void){
 
   // Select MSI as the clock source of System Clock
   RCC->CFGR &= ~RCC_CFGR_SW;
+
 
   // Wait until MSI is ready
   while ((RCC->CR & RCC_CR_MSIRDY) == 0);

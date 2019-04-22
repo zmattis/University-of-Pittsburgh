@@ -9,6 +9,7 @@ void RTC_Init(void);
 void RTC_Clock_Init(void);
 void RTC_Disable_Write_Protection(void);
 void RTC_Enable_Write_Protection(void);
+void RTC_Alarm_Makeup(void);
 void RTC_Set_Calendar_Date(uint32_t WeekDay, uint32_t Day, uint32_t Month, uint32_t Year);
 void RTC_Set_Time(uint32_t Hour, uint32_t Minute, uint32_t Second);
 void RTC_Read_Time(uint32_t *Hour, uint32_t *Minute, uint32_t *Second);

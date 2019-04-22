@@ -22,6 +22,7 @@ Includes code for the following assignments:
   - GPIO
   - Stepper Motor
   - SysTick and RTC
+  - Alarm
 
 ## Project Description
 
@@ -42,6 +43,8 @@ Includes code for the following assignments:
   <dd>Stepper Motor full-stepping and half-stepping</dd>
   <dt>SysTick and RTC</dt>
   <dd>System Timer interrupts and real-time clock (RTC) reading</dd>
+  <dt>Alarm</dt>
+  <dd>Alarm that triggers interrupt according to RTC</dd>
 </dl>
 
 ## License

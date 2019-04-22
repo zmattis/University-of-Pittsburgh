@@ -51,6 +51,26 @@ void RTC_Read_Time(uint32_t *Hour, uint32_t *Minute, uint32_t *Second){
   //xxxx = RTC->TR
 }
 
+
+void RTC_Alarm_Makeup(void){
+
+  // Disable RTC registers write protection
+  RTC_Disable_Write_Protection();
+
+  RTC->CR &= ~RTC_CR_ALRAE;
+
+  while((RTC->ISR & RTC_ISR_ALRAWF) == 0);
+
+  RTC->ALRMAR = RTC_ALRMAR_MSK4 | RTC_ALRMAR_MSK3 | RTC_ALRMAR_MSK2 | ((RTC->TR & 0xFF) + 0x10);
+
+  RTC->CR |= RTC_CR_ALRAE;
+  RTC->CR |= RTC_CR_ALRAIE;
+
+  // Enable RTC registers write protection
+  RTC_Enable_Write_Protection();
+}
+
+
 void RTC_BAK_SetRegister(uint32_t BackupRegister, uint32_t Data)
 {
   register uint32_t tmp = 0;
@@ -64,7 +84,7 @@ void RTC_BAK_SetRegister(uint32_t BackupRegister, uint32_t Data)
 
 void RTC_Init(void){
 
-  /* Enables the PWR Clock and Enables access to the backup domain #######*/
+  /* Enables the PWR Clock and Enables access to the backup domain ####### */
   /* To change the source clock of the RTC feature (LSE, LSI), you have to:
      - Enable the power clock
      - Enable write access to configure the RTC clock source (to be done once after reset).
@@ -81,13 +101,13 @@ void RTC_Init(void){
   while((RTC->ISR & (1 << 6)) == 0) {}  //According AN4759, we need to wait until INITF is set after entering initialization mode
 
   // Configure the Time
-  RTC_Set_Time(0x11, 0x59, 0x55); // // Set Time: 11:59:55 AM
+  RTC_Set_Time(0x11, 0x59, 0x55); // Set Time: 11:59:55 AM
 
   // Exit of initialization mode
   RTC->ISR &= ~RTC_ISR_INIT;
   while((RTC->ISR & RTC_ISR_RSF) == 0);   /* Wait for synchro */
-  /* Note: Needed only if Shadow registers is enabled */
-  /* LL_RTC_IsShadowRegBypassEnabled function can be used */
+                          /* Note: Needed only if Shadow registers is enabled           */
+                          /*       LL_RTC_IsShadowRegBypassEnabled function can be used */
 
   // Enable RTC registers write protection
   RTC_Enable_Write_Protection();
@@ -103,13 +123,13 @@ void RTC_Clock_Init(void){
   // Enable write access to Backup domain
   if ( (RCC->APB1ENR1 & RCC_APB1ENR1_PWREN) == 0 ) {
     RCC->APB1ENR1 |= RCC_APB1ENR1_PWREN;  // Power interface clock enable
-    (void) RCC->APB1ENR1;  // Delay after an RCC peripheral clock enabling
+    (void) RCC->APB1ENR1;                 // Delay after an RCC peripheral clock enabling
   }
 
   // Select LSE as RTC clock source
   if ( (PWR->CR1 & PWR_CR1_DBP) == 0) {
     PWR->CR1  |= PWR_CR1_DBP;               // Enable write access to Backup domain
-    while((PWR->CR1 & PWR_CR1_DBP) == 0);  	// Wait for Backup domain Write protection disable
+    while((PWR->CR1 & PWR_CR1_DBP) == 0);   // Wait for Backup domain Write protection disable
   }
 
   // Reset LSEON and LSEBYP bits before configuring the LSE
